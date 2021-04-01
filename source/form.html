@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body class="page__body">
+
+    <header class="page-header">
+      <a class="logo" href="index.html">
+        <img src="img/logo.svg" width="33" height="38" alt="Логотип cat energy">
+        <img src="img/logo-2-cat-energy.svg" width="101" height="18" alt="Текст логотипа">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--current-item">
+              <a>главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <div class="page-main__wrapper">
+
+        <form class="shape" action="https://echo.htmlacademy.ru/" method="GET">
+
+          <fieldset class="questionnaire">
+            <legend><h1 class="questionnaire__title">Подбор программы</h1></legend>
+            <p class="questionnaire__programm-text">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+            <p class="questionnaire__item">
+              <label for="name"><span>ИМЯ:*</span></label>
+              <input type="text" name="name" id="name" placeholder="барсик" required>
+            </p>
+            <p class="questionnaire__item">
+              <label for="weight"><span>Вес (кг):*</span></label>
+              <input type="text" name="weight" id="weight" placeholder="7" required>
+            </p>
+            <p class="questionnaire__item">
+              <label for="age">Возраст (лет):</label>
+              <input type="text" name="age" id="age" placeholder="7">
+            </p>
+
+            <p class="questionnaire__item">
+              <input type="radio" name="radio" id="lose-weight" value="lose-weight" checked>
+              <label for="lose-weight">похудение</label>
+            </p>
+            <p class="questionnaire__item">
+              <input type="radio" name="radio" id="gain-weight" value="gain-weight">
+              <label for="gain-weight">Набор массы</label>
+            </p>
+            <p class="questionnaire__item">
+              <input type="radio" name="radio" id="advice" value="advice">
+              <label for="advice">Не знаю (Нужен ваш совет)</label>
+            </p>
+          </fieldset>
+
+          <fieldset class="owner-contacts">
+            <legend><h2 class="owner-contacts__title">Контактные данные (владельца кота)</h2></legend>
+            <div class="owner-contacts__item">
+              <label for="email">E-mail:*</label>
+              <div class="input-wrapper">
+                <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+                <button class="input-wrapper__email-button button" type="button">
+                  <svg width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#222" stroke-width="1.3"
+                    d="M1.65 5.85v8M18.65 5.85v8M1 13.2h18M1 1.2h18M18.35 3.03L10 9.53l-8.35-6.5V1.5h16.7v1.53z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="owner-contacts__item">
+              <label for="phone">Телефон:*</label>
+              <div class="input-wrapper">
+                <input type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+                <button class="input-wrapper__phone-button button" type="button">
+                  <svg width="20" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)" fill="#000"><path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 000-.9l-3.1-3.12-.9.9 2.1 2.01zM8.1 19.79v-6.22a.65.65
+                      0 00-.6-.6H3.1a1.23 1.23 0 001.2 1.2h2.5v5.02H3.1a1.78 1.78 0 01-1.9-1.71V3.43a1.78 1.78 0 011.7-1.8h3.9v5.01H4.4a1.22 1.22 0 00-1.2 1.2h4.4a.65.65 0
+                      00.6-.6V.92a.86.86 0 00-.7-.6H3.1A3 3 0 000 3.23v13.95a2.9 2.9 0 002.9 3.1h4.6a.5.5 0 00.6-.5z"/></g><defs><clipPath id="clip0"><path fill="#fff"
+                        transform="translate(0 .32)" d="M0 0h20v20.07H0z"/></clipPath></defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="comment">
+            <legend class="comment__title"><h2>Комментарий</h2></legend>
+            <textarea class="comment__field" cols="40" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+          </fieldset>
+
+          <fieldset class="addition">
+            <legend class="addition__title"><h2>Дополнительно</h2></legend>
+            <p class="addition__item">
+              <input type="checkbox" name="sweetener" id="sweetener" checked>
+              <label for="sweetener">сахарозаменитель</label>
+            </p>
+            <p class="addition__item">
+              <input type="checkbox" name="drinking-water" id="drinking-water">
+              <label for="drinking-water">питьевая вода</label>
+            </p>
+            <p class="addition__item">
+              <input type="checkbox" name="milk" id="milk">
+              <label for="milk">молоко</label>
+            </p>
+            <p class="addition__item">
+              <input type="checkbox" name="vitamins" id="vitamins">
+              <label for="vitamins">витамины</label>
+            </p>
+          </fieldset>
+          <button type="submit" name="send-form">отправить заявку</button>
+          <p class="shape__required-text">* — Обязательные поля</p>
+
+        </form>
+
+      </div>
+
+      <footer class="page-footer">
+        <div class="contacts">
+          <div class="contacts__wrapper">
+            <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
+          <div class="contacts__map-wrapper">
+            <img class="contacts__map-img" src="img/map.png" width="320" height="362" alt="Карта">
+          </div>
+        </div>
+        <div class="logo-name">
+          <a class="logo-name__img" href="#">
+            <img src="img/logo-2-cat-energy.svg" width="128" height="24" alt="Логотип-текст">
+          </a>
+        </div>
+        <ul class="social-list">
+          <li class="social-list__social-item"><a href="https://vk.com/" aria-label="Вконтакте"></a></li>
+          <li class="social-list__social-item"><a href="https://www.instagram.com/?hl=ru" aria-label="Инстаграм"></a></li>
+          <li class="social-list__social-item"><a href="https://www.facebook.com/" aria-label="Фейсбук"></a></li>
+        </ul>
+        <div class="academy-logo">
+          <p class="academy-logo__name">HTML Academy</p>
+          <p class="academy-logo__img-wrapper">
+            <a class="academy-logo__img" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg width="27" height="34"  fill="#666" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02L13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0zm11.6
+                25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26zm0-11.57L22
+                15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8
+                13.58l11.63-6.96 11.8 6.83zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24z"/>
+              </svg>
+            </a>
+          </p>
+        </div>
+      </footer>
+
+    </main>
+
+  </body>
+</html>
