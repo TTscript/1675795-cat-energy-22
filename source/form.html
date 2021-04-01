@@ -35,7 +35,7 @@
         <h1 class="page-main__title">Подбор программы</h1>
         <form class="shape" action="https://echo.htmlacademy.ru/" method="GET">
 
-          <fieldset class="page-main__item questionnaire">
+          <fieldset class="shape__item questionnaire">
 
             <p class="questionnaire__programm-text">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
             <p class="questionnaire__item">
@@ -65,7 +65,7 @@
             </p>
           </fieldset>
 
-          <fieldset class="page-main__item owner-contacts">
+          <fieldset class="shape__item owner-contacts">
             <legend class="owner-contacts__title">Контактные данные (владельца кота)</legend>
             <div class="owner-contacts__item">
               <label for="email">E-mail:*</label>
@@ -91,12 +91,13 @@
             </div>
           </fieldset>
 
-          <fieldset class="page-main__item comment">
-            <legend class="comment__title"><label for="textarea">Комментарий</label></legend>
+          <fieldset class="shape__item comment">
+            <legend class="comment__title">Комментарий</legend>
+            <label class="visually-hidden" for="textarea">Поле для комментария</label>
             <textarea class="comment__field" cols="40" rows="10" id="textarea" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
 
-          <fieldset class="page-main__item addition">
+          <fieldset class="shape__item addition">
             <legend class="addition__title">Дополнительно</legend>
             <p class="addition__item">
               <input class="check-box" type="checkbox" name="sweetener" id="sweetener" checked>
