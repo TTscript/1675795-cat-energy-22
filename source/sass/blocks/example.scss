@@ -42,14 +42,14 @@
 }
 
 .example__results:first-of-type::before {
-  content: url("../../img/decor.elements/weight-back.svg");
+  content: url("../img/decor.elements/weight-back.svg");
   position: absolute;
   top: 0;
   left: -20px;
 }
 
 .example__results:last-of-type::before {
-  content: url("../../img/decor.elements/weight-back.svg");
+  content: url("../img/decor.elements/weight-back.svg");
   position: absolute;
   top: 0;
   right: -20px;

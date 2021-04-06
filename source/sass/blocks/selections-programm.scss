@@ -39,7 +39,7 @@
 
 .selections-programm__item--cat-sit-img {
   &::before {
-    content: url("../../img/decor.elements/cat-sit.svg");
+    content: url("../img/decor.elements/cat-sit.svg");
     display: inline-block;
     padding-top: 20px;
   }
@@ -47,7 +47,7 @@
 
 .selections-programm__item--cat-walk-img {
   &::before {
-    content: url("../../img/decor.elements/cat-walk.svg");
+    content: url("../img/decor.elements/cat-walk.svg");
     display: inline-block;
     padding-top: 20px;
   }
@@ -60,7 +60,7 @@
   padding: 0 0 20px 0;
 
   &::after {
-    content: url("../../img/decor.elements/icon-arrow.svg");
+    content: url("../img/decor.elements/icon-arrow.svg");
     padding: 0 0 0 17px;
   }
 }
