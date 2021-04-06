@@ -1,0 +1,66 @@
+.feeding-process {
+  text-align: left;
+  padding: 0 20px 0 20px;
+  margin: 0 0 42px 0;
+
+  &__title {
+    @include fonts($or, 400, normal, 36px, 40px, $black);
+    margin: 0 0 38px 0;
+    padding: 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.feeding-process__item {
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+
+  p {
+    width: 70%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    padding: 0;
+  }
+}
+
+.feeding-process__item--sheet {
+  &::before {
+    content: url("../../img/decor.elements/sheet.svg");
+  }
+}
+
+.feeding-process__item--powder {
+  &::before {
+    content: url("../../img/decor.elements/powder.svg");
+  }
+}
+
+.feeding-process__item--cutlery {
+  &::before {
+    content: url("../../img/decor.elements/cutlery.svg");
+  }
+}
+
+.feeding-process__item--scales {
+  &::before {
+    content: url("../../img/decor.elements/scales.svg");
+  }
+}

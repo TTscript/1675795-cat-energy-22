@@ -1,0 +1,96 @@
+.example {
+  padding: 20px 0 30px 0;
+  background-color: $bg-example;
+
+  &__title {
+    @include fonts($or, 400, normal, 36px, 40px, $black);
+    margin: 0 0 33px 0;
+    padding: 0 20px;
+  }
+
+  &__description {
+    margin: 0 0 25px 0;
+    padding: 0 20px;
+  }
+
+  &__results-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__costs {
+    @include fonts($or, 400, normal, 14px, 20px, $black);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 42px 0;
+    padding: 0;
+  }
+}
+
+.example__results {
+  text-align: center;
+  position: relative;
+  width: 40%;
+  margin: 0 0 25px 0;
+  padding: 10px 0 0 0;
+
+  span {
+    @include fonts($or, 400, normal, 24px, 24px, $black);
+  }
+}
+
+.example__results:first-of-type::before {
+  content: url("../../img/decor.elements/weight-back.svg");
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+
+.example__results:last-of-type::before {
+  content: url("../../img/decor.elements/weight-back.svg");
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+
+.range-filter__img-wrapper {
+  text-align: center;
+}
+
+.range-filter__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .scale {
+    width: 84px;
+    height: 14px;
+    border: 1px solid $scale-color;
+    border-radius: 6px;
+    margin: 0 5px 0 0;
+    position: relative;
+    background-color: $basic-white;
+
+    .bar {
+      width: 35px;
+      height: 6px;
+      background-color: $basic-green;
+      border-radius: 6px;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+    }
+  }
+}
+
+.range-filter__button {
+  @include fonts($or, 400, normal, 16px, 20px, $black);
+  border: none;
+  text-transform: uppercase;
+
+  &:first-of-type {
+    margin: 0 5px 0 0;
+  }
+}

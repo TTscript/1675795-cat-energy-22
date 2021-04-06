@@ -1,0 +1,25 @@
+.button {
+  background-color: $basic-green;
+  max-width: 280px;
+  color: $basic-white;
+  text-align: center;
+  margin: 0 auto;
+
+
+  a {
+    @include fonts($or, 400, normal, 14px, 18px, $basic-white);
+    text-decoration: none;
+    color: $basic-white;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    display: block;
+  }
+}
+
+a {
+  @include fonts($or, 400, normal, 14px, 18px);
+  text-decoration: none;
+  color: $basic-white;
+  text-transform: uppercase;
+  display: block;
+}

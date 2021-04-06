@@ -1,1 +1,17 @@
-// Начните писать стили здесь
+// <<<---Global--->>>
+@import "global/fonts.scss";
+@import "global/colors.scss";
+@import "global/visually-hidden.scss";
+@import "global/buttons.scss";
+// <<<---BLocks--->>>
+@import "blocks/page-body.scss";
+@import "blocks/body-inner.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/product-info.scss";
+@import "blocks/selections-programm.scss";
+@import "blocks/feeding-process.scss";
+@import "blocks/example.scss";
+@import "blocks/page-footer.scss";
+// <<<---Test--->>>
+@import "blocks/test.scss";
