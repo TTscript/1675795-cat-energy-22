@@ -1,8 +1,9 @@
 // <<<---Global--->>>
 @import "global/fonts.scss";
 @import "global/colors.scss";
-@import "global/visually-hidden.scss";
-@import "global/buttons.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+
 // <<<---BLocks--->>>
 @import "blocks/page-body.scss";
 @import "blocks/body-inner.scss";
@@ -13,5 +14,6 @@
 @import "blocks/feeding-process.scss";
 @import "blocks/example.scss";
 @import "blocks/page-footer.scss";
+@import "blocks/button.scss";
 // <<<---Test--->>>
 @import "blocks/test.scss";

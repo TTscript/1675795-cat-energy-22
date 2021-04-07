@@ -1,3 +1,4 @@
+// visually-hidden
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -12,4 +13,30 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+// border-box
+
+// .page-body {
+//   box-sizing: border-box;
+// }
+
+// *,
+// *::after,
+// *::before {
+//   box-sizing: inherit;
+// }
+
+// images
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+// a
+
+a {
+  text-decoration: none;
 }

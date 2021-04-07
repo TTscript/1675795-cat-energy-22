@@ -19,7 +19,7 @@
     }
 
     &-title {
-      @include fonts($or, 400, normal, 24px, 37px, $black);
+      @include fonts("Oswald Regular", 400, normal, 24px, 37px, $black);
       text-transform: uppercase;
       display: inline-block;
       vertical-align: top;
@@ -54,7 +54,7 @@
 }
 
 .selections-programm__item-link {
-  @include fonts($or, 400, normal, 16px, 16px);
+  @include fonts("Oswald Regular", 400, normal, 16px, 16px);
   color: $black;
   text-align: left;
   padding: 0 0 20px 0;

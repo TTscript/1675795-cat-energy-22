@@ -3,7 +3,7 @@
   background-color: $bg-example;
 
   &__title {
-    @include fonts($or, 400, normal, 36px, 40px, $black);
+    @include fonts("Oswald Regular", 400, normal, 36px, 40px, $black);
     margin: 0 0 33px 0;
     padding: 0 20px;
   }
@@ -21,7 +21,7 @@
   }
 
   &__costs {
-    @include fonts($or, 400, normal, 14px, 20px, $black);
+    @include fonts("Oswald Regular", 400, normal, 14px, 20px, $black);
     text-transform: uppercase;
     text-align: center;
     margin: 0 0 42px 0;
@@ -37,7 +37,7 @@
   padding: 10px 0 0 0;
 
   span {
-    @include fonts($or, 400, normal, 24px, 24px, $black);
+    @include fonts("Oswald Regular", 400, normal, 24px, 24px, $black);
   }
 }
 
@@ -86,7 +86,7 @@
 }
 
 .range-filter__button {
-  @include fonts($or, 400, normal, 16px, 20px, $black);
+  @include fonts("Oswald Regular", 400, normal, 16px, 20px, $black);
   border: none;
   text-transform: uppercase;
 
