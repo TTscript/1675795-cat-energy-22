@@ -1,0 +1,22 @@
+.academy-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.academy-logo__name {
+  color: inherit;
+}
+
+.academy-logo__img:hover svg {
+  fill: $basic-green;
+}
+
+.academy-logo__name,
+.academy-logo__img {
+  &:active {
+    opacity: 0.3;
+  }
+}

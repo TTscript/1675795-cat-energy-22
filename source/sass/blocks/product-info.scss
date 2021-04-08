@@ -4,37 +4,33 @@
   text-align: center;
   padding: 0;
   margin: 0 0 22px 0;
+}
 
-  &__inner {
-    background-color: $basic-green;
-    opacity: 0.85;
-    min-height: 272px;
-    margin: 0 0 160px 0;
-    padding: 30px 0 0 0;
-  }
+.product-info__inner {
+  background-color: $basic-green;
+  opacity: 0.85;
+  min-height: 302px;
+  margin: 0 0 160px 0;
+  padding: 30px 0 0 0;
+}
 
-  &__title {
-    @include fonts("Oswald Regular", 400, normal, 36px, 36px, $black);
-    color: $basic-white;
-    margin: 0 0 25px 0;
-    padding: 0;
-  }
+.product-info__title {
+  @include fonts($fontOswaldRegular, 400, normal, 36px, 36px, $black);
+  color: $basic-white;
+  margin: 0 0 25px 0;
+  padding: 0;
+}
 
-  &__slogan {
-    @include fonts("Oswald Regular", 400, normal, 14px, 14px, $black);
-    color: $basic-white;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-  }
+.product-info__slogan {
+  @include fonts($fontOswaldRegular, 400, normal, 14px, 14px, $black);
+  color: $basic-white;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
 
-  &__picture {
-    position: absolute;
-    top: 180px;
-    left: 25px;
-  }
-
-  &__select-programm {
-    text-decoration: none;
-  }
+.product-info__picture {
+  position: absolute;
+  top: 180px;
+  left: 25px;
 }

@@ -1,0 +1,50 @@
+.range-filter__img-wrapper {
+  text-align: center;
+}
+
+.range-filter__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .scale {
+    width: 84px;
+    height: 14px;
+    border: 1px solid $scale-color;
+    border-radius: 6px;
+    margin: 0 5px 0 0;
+    position: relative;
+    background-color: $basic-white;
+
+    .bar {
+      width: 35px;
+      height: 6px;
+      background-color: $basic-green;
+      border-radius: 6px;
+      position: absolute;
+      top: 3px;
+      left: 4px;
+    }
+  }
+}
+
+.range-filter__button {
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 20px, $black);
+  border: none;
+  border-bottom: 1px dashed $border-dashed-color;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+
+  &:first-of-type {
+    margin: 0 5px 0 0;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $border-solid-color;
+  }
+
+  &:active {
+    border: none;
+  }
+}

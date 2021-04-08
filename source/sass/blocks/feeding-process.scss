@@ -2,18 +2,18 @@
   text-align: left;
   padding: 0 20px 0 20px;
   margin: 0 0 42px 0;
+}
 
-  &__title {
-    @include fonts("Oswald Regular", 400, normal, 36px, 40px, $black);
-    margin: 0 0 38px 0;
-    padding: 0;
-  }
+.feeding-process__title {
+  @include fonts($fontOswaldRegular, 400, normal, 36px, 40px, $black);
+  margin: 0 0 38px 0;
+  padding: 0;
+}
 
-  &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+.feeding-process__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .feeding-process__item {
@@ -21,14 +21,6 @@
   padding: 0;
   display: inline-block;
   vertical-align: middle;
-
-  p {
-    width: 70%;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    vertical-align: top;
-  }
 
   &:last-of-type {
     margin-bottom: 0;
@@ -63,4 +55,12 @@
   &::before {
     content: url("../img/decor.elements/scales.svg");
   }
+}
+
+.feeding-process__item-description {
+  width: 70%;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
 }

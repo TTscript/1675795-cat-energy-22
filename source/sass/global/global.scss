@@ -17,15 +17,15 @@ input[type="radio"].visually-hidden {
 
 // border-box
 
-// .page-body {
-//   box-sizing: border-box;
-// }
+.page-body {
+  box-sizing: border-box;
+}
 
-// *,
-// *::after,
-// *::before {
-//   box-sizing: inherit;
-// }
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
 
 // images
 
