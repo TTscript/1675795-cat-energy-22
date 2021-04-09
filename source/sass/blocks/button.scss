@@ -1,13 +1,15 @@
 .button {
   @include fonts($fontOswaldRegular, 400, normal, 14px, 18px, $basic-white);
   background-color: $basic-green;
-  max-width: 280px;
-  min-height: 40px;
+  min-width: 280px;
+  height: 40px;
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
-  display: block;
-  padding: 10px 0 0 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 
   &:hover {
     background-color: $green-btn-hover;

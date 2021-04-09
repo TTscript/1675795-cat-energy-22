@@ -34,12 +34,12 @@
   max-width: 55%;
   margin: 0 auto 0 auto;
   padding: 10px 0 0 0;
+}
 
-  span {
-    @include fonts($fontOswaldRegular, 400, normal, 24px, 24px, $black);
-    display: block;
-    margin-bottom: 12px;
-  }
+.example__results-title {
+  @include fonts($fontOswaldRegular, 400, normal, 24px, 24px, $black);
+  display: block;
+  margin-bottom: 12px;
 }
 
 .example__border-wrapper {

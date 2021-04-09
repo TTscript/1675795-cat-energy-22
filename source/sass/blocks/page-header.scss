@@ -3,3 +3,26 @@
   margin: 0;
   padding: 0;
 }
+
+.page-header__wrapper {
+  padding: 15px 0;
+  border-bottom: 1px solid $header-menu-line;
+}
+
+.page-header__logo-stroke {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 277px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page-header__toggle {
+  max-width: 18px;
+  min-height: 18px;
+  background-color: $basic-white;
+  border: 2px solid $black;
+  border-left: none;
+  border-right: none;
+}

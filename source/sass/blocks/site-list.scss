@@ -8,26 +8,26 @@
   margin: 0;
   padding: 22px 0;
   border-bottom: 1px solid $header-menu-line;
+  cursor: pointer;
 
   &:last-of-type {
     margin: 0;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.site-list__item-title--current-item {
+  border-bottom: 2px solid $basic-green;
 }
 
 .site-list__item-title {
   @include fonts($fontOswaldMedium, 500, normal, 20px, 20px, $black);
   text-transform: uppercase;
-}
-
-.site-list__logo-stroke {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 277px;
-  margin: 0 auto;
-}
-
-.site-list__toggle {
-  max-width: 18px;
-  min-height: 18px;
 }

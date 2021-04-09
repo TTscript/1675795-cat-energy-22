@@ -1,3 +1,7 @@
+.academy-logo__name {
+  color: $simple-text;
+}
+
 .academy-logo {
   display: flex;
   justify-content: space-between;
@@ -6,16 +10,12 @@
   margin: 0;
 }
 
-.academy-logo__name {
-  color: inherit;
-}
-
-.academy-logo__img:hover svg {
+.academy-logo:hover svg {
   fill: $basic-green;
 }
 
 .academy-logo__name,
-.academy-logo__img {
+.academy-logo {
   &:active {
     opacity: 0.3;
   }
