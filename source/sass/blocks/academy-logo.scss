@@ -1,16 +1,13 @@
 .academy-logo {
   padding: 0 20px;
   margin: 0;
-  display: block;
-  text-align: right;
 }
 
 .academy-logo__link {
   color: $simple-text;
-}
-
-.academy-logo__link svg {
-  margin-left: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .academy-logo__link:hover svg {
