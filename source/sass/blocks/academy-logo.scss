@@ -1,21 +1,24 @@
-.academy-logo__name {
+.academy-logo {
+  padding: 0 20px;
+  margin: 0;
+  display: block;
+  text-align: right;
+}
+
+.academy-logo__link {
   color: $simple-text;
 }
 
-.academy-logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  margin: 0;
+.academy-logo__link svg {
+  margin-left: 150px;
 }
 
-.academy-logo:hover svg {
+.academy-logo__link:hover svg {
   fill: $basic-green;
 }
 
 .academy-logo__name,
-.academy-logo {
+.academy-logo__link {
   &:active {
     opacity: 0.3;
   }
