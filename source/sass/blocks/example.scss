@@ -1,0 +1,48 @@
+.example {
+  padding: 20px 0 30px 0;
+  background-color: $bg-example;
+}
+
+.example__title {
+  @include fonts($fontOswaldRegular, 400, normal, 36px, 40px, $black);
+  margin: 0 0 33px 0;
+  padding: 0 20px;
+}
+
+.example__description {
+  margin: 0 0 25px 0;
+  padding: 0 20px;
+}
+
+.example__results-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 25px auto;
+}
+
+.example__costs {
+  @include fonts($fontOswaldRegular, 400, normal, 14px, 20px, $black);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 42px 0;
+  padding: 0;
+}
+
+.example__results {
+  @include fonts($fontArial, 400, normal, 12px, 12px, $simple-text);
+  text-align: center;
+  max-width: 55%;
+  margin: 0 auto 0 auto;
+  padding: 10px 0 0 0;
+}
+
+.example__results-title {
+  @include fonts($fontOswaldRegular, 400, normal, 24px, 24px, $black);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.example__border-wrapper {
+  background: url("../img/decor.elements/weight-back.svg") no-repeat 50% 0;
+  width: 48%;
+}

@@ -1,0 +1,31 @@
+.contacts {
+  background-color: $basic-white;
+  text-align: left;
+  padding: 28px 0 0 0;
+  margin: 0;
+}
+
+.contacts__wrapper {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 28px 0;
+}
+
+.contacts__invite {
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 18px, $contacts-color);
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0 10px 0 0;
+}
+
+.contacts__address {
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__map-wrapper {
+  display: flex;
+  background-color: $simple-text;
+}

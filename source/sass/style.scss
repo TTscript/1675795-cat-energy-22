@@ -1,1 +1,23 @@
-// Начните писать стили здесь
+// <<<---Global--->>>
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/global.scss";
+
+// <<<---BLocks--->>>
+@import "blocks/page-body.scss";
+@import "blocks/logo.scss";
+@import "blocks/page-header.scss";
+@import "blocks/product-info.scss";
+@import "blocks/selections-programm.scss";
+@import "blocks/feeding-process.scss";
+@import "blocks/example.scss";
+@import "blocks/range-filter.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/button.scss";
+@import "blocks/contacts.scss";
+@import "blocks/footer-logo.scss";
+@import "blocks/social-list.scss";
+@import "blocks/social-border-wrapper.scss";
+@import "blocks/academy-logo.scss";
+@import "blocks/site-list.scss";
