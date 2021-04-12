@@ -17,6 +17,7 @@
   left: 40px;
   display: block;
   color: $radio-button-color;
+  cursor: pointer;
 
   &::before {
     content: "";
