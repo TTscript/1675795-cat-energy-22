@@ -78,21 +78,21 @@
 }
 
 .addition__check-box:checked + label::after {
-  content: url("../../img/decor.elements/checkbox-checked.svg");
+  content: url("../img/decor.elements/checkbox-checked.svg");
   position: absolute;
   top: 4px;
   left: -35px;
 }
 
 .addition__check-box:checked:hover + label::after {
-  content: url("../../img/decor.elements/checkbox-checked-hover.svg");
+  content: url("../img/decor.elements/checkbox-checked-hover.svg");
   position: absolute;
   top: 5px;
   left: -39px;
 }
 
 .addition__check-box:checked:disabled + label::after {
-  content: url("../../img/decor.elements/checkbox-checked.svg");
+  content: url("../img/decor.elements/checkbox-checked.svg");
   position: absolute;
   top: 4px;
   left: -35px;
