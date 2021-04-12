@@ -1,0 +1,107 @@
+.addition {
+  border: 0;
+  padding: 0 20px;
+  position: relative;
+  margin: 0 0 40px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    right: 0;
+    width: 136px;
+    height: 2px;
+    background-color: $basic-green;
+  }
+}
+
+.addition__title {
+  @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
+  margin: 0 0 34px 0;
+}
+
+.addition__item {
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.addition__item label {
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 18px, $black);
+  text-transform: uppercase;
+}
+
+.addition__check-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.addition__check-box + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $scale-color;
+}
+
+.addition__check-box:hover + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $check-box-hover;
+}
+
+.addition__check-box:disabled + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $check-box-disabled;
+}
+
+.addition__check-box:checked + label::after {
+  content: url("../../img/decor.elements/checkbox-checked.svg");
+  position: absolute;
+  top: 4px;
+  left: -35px;
+}
+
+.addition__check-box:checked:hover + label::after {
+  content: url("../../img/decor.elements/checkbox-checked-hover.svg");
+  position: absolute;
+  top: 5px;
+  left: -39px;
+}
+
+.addition__check-box:checked:disabled + label::after {
+  content: url("../../img/decor.elements/checkbox-checked.svg");
+  position: absolute;
+  top: 4px;
+  left: -35px;
+  opacity: 0.3;
+}
+
+.addition__label {
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  left: 40px;
+}

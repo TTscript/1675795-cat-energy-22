@@ -1,0 +1,16 @@
+.shape {
+  margin: 0;
+  padding: 0 0 32px 0;
+}
+
+.shape__required-text {
+  @include fonts($fontArial, 400, normal, 14px, 16px, $black);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.shape__button-wrapper {
+  padding: 0 20px;
+  margin: 0;
+}

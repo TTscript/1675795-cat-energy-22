@@ -1,0 +1,20 @@
+.radio-box-field {
+  @include fonts($fontOswaldRegular, 400, normal, 14px, 18px);
+  text-transform: uppercase;
+  border: 0;
+  padding: 27px 20px 25px 20px;
+  margin: 0 0 26px 0;
+  border-top: 1px solid $line-color;
+  border-bottom: 1px solid $line-color;
+}
+
+.radio-box-field__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 24px 0;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}

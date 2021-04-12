@@ -1,0 +1,27 @@
+.questionnaire {
+  @include fonts($fontOswaldRegular, 400, normal, 14px, 18px);
+  text-transform: uppercase;
+  border: 0;
+  padding: 0 20px 27px 20px;
+  margin: 0;
+}
+
+.questionnaire__programm-text {
+  @include fonts($fontOswaldRegular, 400, normal, 14px, 18px, $black);
+  margin: 0 0 39px 0;
+}
+
+.questionnaire__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 24px 0;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.questionnaire__entry-box {
+  flex-grow: 1;
+}

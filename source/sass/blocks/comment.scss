@@ -1,0 +1,31 @@
+.comment {
+  border: 0;
+  padding: 0 20px;
+  position: relative;
+  margin: 0 0 22px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 158px;
+    height: 2px;
+    background-color: $basic-green;
+  }
+}
+
+.comment__title {
+  @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
+  margin: 0 0 35px 0;
+}
+
+.comment__field {
+  width: 100%;
+  border: 1px solid $scale-color;
+
+  &::placeholder {
+    @include fonts($fontOswaldRegular, 400, normal, 16px, 18px, $simple-text);
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,9 @@
+.page-main__title {
+  @include fonts($fontOswaldRegular, 400, normal, 36px, 36px, $black);
+  padding: 0 20px;
+  margin: 0 0 36px 0;
+}
+
+.page-main__logic-connection {
+  margin: 0 10px 0 0;
+}
