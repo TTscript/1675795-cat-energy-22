@@ -9,9 +9,59 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  &:hover + .page-main__logic-connection::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $check-box-hover;
+  }
+
+  &:disabled + .page-main__logic-connection {
+    opacity: 0.3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -40px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid $radio-button-opacity;
+      opacity: 0.3;
+    }
+  }
+
+  &:checked + .page-main__logic-connection::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -31px;
+    width: 13px;
+    height: 13px;
+    background-color: $basic-green;
+    border-radius: 50%;
+  }
+
+  &:checked:disabled + .page-main__logic-connection::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -31px;
+    width: 13px;
+    height: 13px;
+    background-color: $basic-green;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
 }
 
-.radio-box + label {
+.radio-box + .page-main__logic-connection {
   position: relative;
   top: 0;
   left: 40px;
@@ -29,54 +79,4 @@
     border-radius: 50%;
     border: 1px solid $scale-color;
   }
-}
-
-.radio-box:hover + label::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -40px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid $check-box-hover;
-}
-
-.radio-box:disabled + label {
-  opacity: 0.3;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -40px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid $radio-button-opacity;
-    opacity: 0.3;
-  }
-}
-
-.radio-box:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: -31px;
-  width: 13px;
-  height: 13px;
-  background-color: $basic-green;
-  border-radius: 50%;
-}
-
-.radio-box:checked:disabled + label::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: -31px;
-  width: 13px;
-  height: 13px;
-  background-color: $basic-green;
-  border-radius: 50%;
-  opacity: 0.3;
 }
