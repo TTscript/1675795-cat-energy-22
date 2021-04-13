@@ -1,4 +1,15 @@
 .radio-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 24px 0;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.radio-box__input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -10,7 +21,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 
-  &:hover + .page-main__logic-connection::before {
+  &:hover + .radio-box__label::before {
     content: "";
     position: absolute;
     top: -5px;
@@ -21,7 +32,7 @@
     border: 1px solid $check-box-hover;
   }
 
-  &:disabled + .page-main__logic-connection {
+  &:disabled + .radio-box__label {
     opacity: 0.3;
 
     &::before {
@@ -37,7 +48,7 @@
     }
   }
 
-  &:checked + .page-main__logic-connection::after {
+  &:checked + .radio-box__label::after {
     content: "";
     position: absolute;
     top: 4px;
@@ -48,7 +59,7 @@
     border-radius: 50%;
   }
 
-  &:checked:disabled + .page-main__logic-connection::after {
+  &:checked:disabled + .radio-box__label::after {
     content: "";
     position: absolute;
     top: 4px;
@@ -61,7 +72,7 @@
   }
 }
 
-.radio-box + .page-main__logic-connection {
+.radio-box__input + .radio-box__label {
   position: relative;
   top: 0;
   left: 40px;

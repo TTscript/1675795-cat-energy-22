@@ -7,14 +7,3 @@
   border-top: 1px solid $line-color;
   border-bottom: 1px solid $line-color;
 }
-
-.radio-box-field__item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0 0 24px 0;
-
-  &:last-of-type {
-    margin: 0;
-  }
-}
