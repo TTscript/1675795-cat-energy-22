@@ -1,0 +1,21 @@
+.addition {
+  border: 0;
+  padding: 0 20px;
+  position: relative;
+  margin: 0 0 40px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    right: 0;
+    width: 136px;
+    height: 2px;
+    background-color: $basic-green;
+  }
+}
+
+.addition__title {
+  @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
+  margin: 0 0 34px 0;
+}

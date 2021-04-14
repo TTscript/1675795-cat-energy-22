@@ -1,0 +1,25 @@
+.entry-box {
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 18px);
+  text-transform: uppercase;
+  padding: 0 0 0 15px;
+  height: 45px;
+  border: 1px solid $entry-box-basic;
+
+  &:hover {
+    border: 1px solid $scale-color;
+  }
+
+  &:focus {
+    border: 1px solid $simple-text;
+    outline: 1px solid $simple-text;
+  }
+
+  &:required:invalid {
+    border: 1px solid $entry-box-error;
+    outline: 1px solid $entry-box-error;
+  }
+
+  &::placeholder:focus {
+    padding: -20px;
+  }
+}

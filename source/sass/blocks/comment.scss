@@ -1,0 +1,43 @@
+.comment {
+  border: 0;
+  padding: 0 20px;
+  position: relative;
+  margin: 0 0 22px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 158px;
+    height: 2px;
+    background-color: $basic-green;
+  }
+}
+
+.comment__title {
+  @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
+  margin: 0 0 35px 0;
+}
+
+.comment__field {
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 18px);
+  width: 100%;
+  border: 1px solid $entry-box-basic;
+  padding: 10px;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 1px solid $scale-color;
+  }
+
+  &:focus {
+    border: 1px solid $simple-text;
+    outline: 1px solid $simple-text;
+  }
+
+  &:required:invalid {
+    border: 1px solid $entry-box-error;
+    outline: 1px solid $entry-box-error;
+  }
+}

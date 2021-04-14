@@ -1,0 +1,83 @@
+.check-box {
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.check-box__label {
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 18px, $black);
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  padding-left: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $scale-color;
+  }
+}
+
+.check-box__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:hover {
+    & + .check-box__label::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $check-box-hover;
+    }
+  }
+
+  &:checked {
+    & + .check-box__label::after {
+      content: url("../img/decor.elements/checkbox-checked.svg");
+      position: absolute;
+      top: 4px;
+      left: 5px;
+    }
+  }
+
+  &:disabled {
+    & + .check-box__label::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $check-box-disabled;
+    }
+  }
+
+  &:checked:disabled {
+    & + .addition__label::after {
+      content: url("../img/decor.elements/checkbox-checked.svg");
+      position: absolute;
+      top: 4px;
+      left: 5px;
+      opacity: 0.3;
+    }
+  }
+}
