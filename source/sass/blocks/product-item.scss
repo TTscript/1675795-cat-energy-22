@@ -1,0 +1,30 @@
+.product-item {
+  margin: 0;
+  padding: 16px 0 19px 0;
+  border-bottom: 1px solid $scale-color;
+
+  &:first-of-type {
+    border-top: 1px solid $scale-color;
+  }
+}
+
+.product-item__title {
+  margin: 0;
+  padding: 0;
+}
+
+.product-item__link {
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 16px, $radio-button-color);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.product-item__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 280px;
+  margin: 0 0 15px 0;
+  padding: 0;
+}

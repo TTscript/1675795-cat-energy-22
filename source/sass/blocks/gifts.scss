@@ -1,0 +1,23 @@
+.gifts {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  background: url("../img/cat-back.png") no-repeat 50% 50%;
+  width: 280px;
+  height: 289px;
+  margin: 0 0 35px 0;
+  padding: 40px 20px 0 20px;
+}
+
+.gifts__text {
+  @include fonts($fontArial, 400, normal, 16px, 20px, $basic-white);
+  text-align: center;
+
+  &::before {
+    content: url("../../img/decor.elements/icon-gift.svg");
+    display: block;
+    margin: 0 0 48px 0;
+    padding: 0;
+  }
+}
