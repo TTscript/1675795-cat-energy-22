@@ -25,11 +25,12 @@
   padding: 0;
 }
 
-.contacts__map-wrapper {
-  display: flex;
-  background-color: $simple-text;
-}
-
 .contacts--form-color {
   background-color: $btn-color;
+}
+
+.contacts__map {
+  display: flex;
+  background-color: $simple-text;
+  min-width: 100%;
 }

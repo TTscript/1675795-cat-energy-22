@@ -1,4 +1,17 @@
 .product-info {
+  @media (min-width: $tablet-width) {
+    background: none;
+    text-align: left;
+    padding-left: 87px;
+    margin-bottom: 630px;
+
+    &::after {
+      content: url("../img/product-tablet.jpg");
+      position: absolute;
+      top: 170px;
+      left: 0;
+    }
+  }
   position: relative;
   background: url("../img/cat-background.jpg") no-repeat;
   text-align: center;
@@ -7,6 +20,13 @@
 }
 
 .product-info__inner {
+  @media (min-width: $tablet-width) {
+    background: none;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+  }
   background-color: $basic-green;
   opacity: 0.85;
   min-height: 302px;
@@ -15,22 +35,45 @@
 }
 
 .product-info__title {
-  @include fonts($fontOswaldRegular, 400, normal, 36px, 36px, $black);
-  color: $basic-white;
+  @include fonts($fontOswaldRegular, 400, normal, 36px, 36px, $basic-white);
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(60px, 60px, $black);
+    width: 70%;
+  }
   margin: 0 0 25px 0;
   padding: 0;
 }
 
 .product-info__slogan {
-  @include fonts($fontOswaldRegular, 400, normal, 14px, 14px, $black);
-  color: $basic-white;
+  @include fonts($fontOswaldRegular, 400, normal, 14px, 14px, $basic-white);
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 20px, $black);
+  }
   text-transform: uppercase;
   margin: 0;
   padding: 0;
 }
 
 .product-info__picture {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
   position: absolute;
   top: 180px;
   left: 25px;
+}
+
+.product-info__button--tablet.button {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 200px;
+    left: 87px;
+    z-index: 1;
+    font-size: 20px;
+    line-height: 20px;
+    min-width: 244px;
+    height: 54px;
+  }
 }

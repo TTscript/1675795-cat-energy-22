@@ -4,11 +4,20 @@
   padding: 0;
 }
 
+.page-header__nav {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
 .page-header--space {
   margin-bottom: 27px;
 }
 
 .page-header__wrapper {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
   padding: 15px 0;
   border-bottom: 1px solid $header-menu-line;
 }
@@ -29,4 +38,12 @@
   border: 2px solid $black;
   border-left: none;
   border-right: none;
+}
+
+.page-header__logo-tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

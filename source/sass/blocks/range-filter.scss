@@ -9,6 +9,11 @@
 }
 
 .range-filter__scale {
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    border: 0;
+    width: 428px;
+  }
   width: 84px;
   height: 14px;
   border: 1px solid $scale-color;
@@ -26,6 +31,11 @@
   position: absolute;
   top: 3px;
   left: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    background-color: $scale-tablet;
+  }
 }
 
 .range-filter__button {
@@ -46,5 +56,32 @@
 
   &:active {
     border: none;
+  }
+}
+
+.range-filter__cat {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.range-filter__cat-tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.range-filter__toggle {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -7px;
+    left: 214px;
+    width: 8px;
+    height: 8px;
+    background-color: $basic-green;
+    border: 14px solid $basic-white;
+    border-radius: 50%;
   }
 }

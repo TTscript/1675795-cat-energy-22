@@ -21,6 +21,10 @@
 }
 
 .selections-programm__item-title {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(36px, 36px, $black);
+  }
+
   @include fonts($fontOswaldRegular, 400, normal, 24px, 37px, $black);
   text-transform: uppercase;
   display: inline-block;
@@ -30,6 +34,10 @@
 }
 
 .selections-programm__item-description {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(16px, 24px, $black);
+    width: 60%;
+  }
   width: 85%;
   text-align: left;
   padding: 0 0 20px 0;
@@ -37,27 +45,70 @@
 }
 
 .selections-programm__item--cat-sit-img {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      content: url("../img/decor.elements/big-cat-sit.svg");
+      position: absolute;
+      top: 30px;
+      right: 50px;
+    }
+  }
+
   &::before {
     content: url("../img/decor.elements/cat-sit.svg");
     display: inline-block;
     padding-top: 20px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
 .selections-programm__item--cat-walk-img {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      content: url("../img/decor.elements/big-cat-walk.svg");
+      position: absolute;
+      top: 30px;
+      right: 20px;
+    }
+  }
+
   &::before {
     content: url("../img/decor.elements/cat-walk.svg");
     display: inline-block;
     padding-top: 20px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.selections-programm__item--cat-walk-img .selections-programm__item-description {
+  @media (min-width: $tablet-width) {
+    width: 55%;
   }
 }
 
 .selections-programm__border-bottom-wrapper {
+  @media (min-width: $tablet-width) {
+    border: 0;
+  }
   border-bottom: 1px solid $line-color;
   margin: 0 0 23px 0;
 }
 
 .selections-programm__item-link {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 30px, $black);
+  }
+
   @include fonts($fontOswaldRegular, 400, normal, 16px, 16px, $black);
   text-transform: uppercase;
   text-align: left;

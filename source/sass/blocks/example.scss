@@ -4,12 +4,19 @@
 }
 
 .example__title {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(60px, 60px, $black);
+  }
+
   @include fonts($fontOswaldRegular, 400, normal, 36px, 40px, $black);
   margin: 0 0 33px 0;
   padding: 0 20px;
 }
 
 .example__description {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(16px, 24px);
+  }
   margin: 0 0 25px 0;
   padding: 0 20px;
 }
@@ -18,9 +25,21 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto 25px auto;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin: 0;
+  }
 }
 
 .example__costs {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 20px, $black);
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+  }
+
   @include fonts($fontOswaldRegular, 400, normal, 14px, 20px, $black);
   text-transform: uppercase;
   text-align: center;
@@ -29,6 +48,12 @@
 }
 
 .example__results {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(14px, 14px);
+    max-width: 100%;
+    padding-top: 15px;
+  }
+
   @include fonts($fontArial, 400, normal, 12px, 12px, $simple-text);
   text-align: center;
   max-width: 55%;
@@ -37,12 +62,32 @@
 }
 
 .example__results-title {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(30px, 37px, $black);
+  }
+
   @include fonts($fontOswaldRegular, 400, normal, 24px, 24px, $black);
   display: block;
   margin-bottom: 12px;
 }
 
 .example__border-wrapper {
+  @media (min-width: $tablet-width) {
+    background-size: 162px, 77px;
+    display: inline-block;
+  }
   background: url("../img/decor.elements/weight-back.svg") no-repeat 50% 0;
   width: 48%;
+}
+
+.example__tablet-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__results-subtitle {
+  display: inline-block;
+  width: 90%;
 }
