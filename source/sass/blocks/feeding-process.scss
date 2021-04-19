@@ -2,6 +2,10 @@
   text-align: left;
   padding: 0 20px 0 20px;
   margin: 0 0 42px 0;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .feeding-process__title {
@@ -15,6 +19,10 @@
 }
 
 .feeding-process__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -22,9 +30,11 @@
     column-gap: 150px;
     counter-reset: list;
   }
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 0;
+  }
 }
 
 .feeding-process__list .feeding-process__item {
@@ -40,6 +50,10 @@
       top: 60%;
       right: 10%;
       z-index: -1;
+
+      @media (min-width: $desktop-width) {
+        top: 50%;
+      }
     }
   }
 

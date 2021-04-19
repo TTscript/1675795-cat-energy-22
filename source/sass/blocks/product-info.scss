@@ -11,6 +11,21 @@
       top: 170px;
       left: 0;
     }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 200px;
+      left: 100px;
+      z-index: 2;
+
+      &::after {
+        content: url("../../img/product-desktop.png");
+        position: absolute;
+        top: -100px;
+        left: 600px;
+        z-index: 6;
+      }
+    }
   }
   position: relative;
   background: url("../img/cat-background.jpg") no-repeat;
@@ -37,12 +52,13 @@
 .product-info__title {
   @include fonts($fontOswaldRegular, 400, normal, 36px, 36px, $basic-white);
 
+  margin: 0 0 25px 0;
+  padding: 0;
+
   @media (min-width: $tablet-width) {
     @include fontSizeColor(60px, 60px, $black);
     width: 70%;
   }
-  margin: 0 0 25px 0;
-  padding: 0;
 }
 
 .product-info__slogan {
@@ -57,15 +73,16 @@
 }
 
 .product-info__picture {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
   position: absolute;
   top: 180px;
   left: 25px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
-.product-info__button--tablet.button {
+.product-info__button-tablet.button {
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 200px;

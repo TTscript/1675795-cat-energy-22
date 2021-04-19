@@ -71,17 +71,54 @@
   @media (min-width: $tablet-width) {
     display: block;
   }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.range-filter__cat-desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    top: -500px;
+    right: 40px;
+  }
 }
 
 .range-filter__toggle {
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: -7px;
+    position: relative;
+    top: -11px;
     left: 214px;
+    width: 34px;
+    height: 34px;
+    background-color: $basic-white;
+    border-radius: 55%;
+    border: 1px solid $scale-color;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+
+    &:hover {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+      border: 1px solid $basic-green;
+    }
+  }
+}
+
+.range-filter__toggle-green {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 12px;
+    left: 12px;
     width: 8px;
     height: 8px;
     background-color: $basic-green;
-    border: 14px solid $basic-white;
     border-radius: 50%;
   }
 }

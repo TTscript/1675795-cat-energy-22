@@ -16,10 +16,6 @@
       <header class="page-header">
         <nav class="page-header__nav main-nav">
 
-          <a class="page-header__logo-tablet">
-            <img src="img/logo-tablet.svg" width="174" height="51" alt="Логотип cat energy">
-          </a>
-
           <div class="page-header__wrapper">
             <div class="page-header__logo-stroke">
               <a class="logo logo--hover-active">
@@ -32,19 +28,32 @@
             </div>
           </div>
 
+          <a class="page-header__logo-tablet">
+            <img src="img/logo-tablet.svg" width="174" height="51" alt="Логотип cat energy">
+          </a>
+
+          <a class="page-header__logo-desktop">
+            <img src="img/logo-desktop.svg" width="202" height="59" alt="Логотип cat energy">
+          </a>
+
+          <div class="page-header__desktop-back">
             <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__item-title site-list__item-title--current-item">главная</a>
-              </li>
 
-              <li class="site-list__item">
-                <a class="site-list__item-title" href="catalog.html">каталог продукции</a>
-              </li>
+            <li class="site-list__item">
+              <a class="site-list__item-title site-list__item-title--current-item">главная</a>
+            </li>
 
-              <li class="site-list__item">
-                <a class="site-list__item-title" href="form.html">подбор программы</a>
-              </li>
+            <li class="site-list__item">
+              <a class="site-list__item-title" href="catalog.html">каталог продукции</a>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__item-title" href="form.html">подбор программы</a>
+
+            </li>
+
             </ul>
+          </div>
 
         </nav>
       </header>
@@ -58,7 +67,7 @@
               <p class="product-info__slogan">Занялся собой? Займись котом!</p>
             </div>
             <img class="product-info__picture" src="img/product.png" width="280" height="270" alt="Фото продукта">
-            <p><a class="product-info__button--tablet button" href="form.html">подобрать программу</a></p>
+            <p><a class="product-info__button-tablet button" href="form.html">подобрать программу</a></p>
           </div>
         </section>
 
@@ -105,32 +114,38 @@
         </section>
 
         <section class="example">
+          <h2 class="example__title">Живой пример</h2>
           <div class="example__wrapper section-wrapper">
-            <h2 class="example__title">Живой пример</h2>
-            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
-              При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-            <div class="example__tablet-wrapper">
-              <div class="example__results-wrapper">
-                <div class="example__border-wrapper">
-                  <p class="example__results"><span class="example__results-title">5 КГ</span><span class="example__results-subtitle">снижение веса</span></p>
+
+            <div class="example__desktop-column-wrapper">
+              <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+                При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+              <div class="example__tablet-wrapper">
+                <div class="example__results-wrapper">
+                  <div class="example__border-wrapper">
+                    <p class="example__results"><span class="example__results-title">5 КГ</span><span class="example__results-subtitle">снижение веса</span></p>
+                  </div>
+                  <div class="example__border-wrapper">
+                    <p class="example__results"><span class="example__results-title">60 ДНЕЙ</span><span class="example__results-subtitle">затрачено времени</span></p>
+                  </div>
                 </div>
-                <div class="example__border-wrapper">
-                  <p class="example__results"><span class="example__results-title">60 ДНЕЙ</span><span class="example__results-subtitle">затрачено времени</span></p>
-                </div>
+                <p class="example__costs"><span class="example__costs-text">Затраты на питание:</span> 15 000 РУБ.</p>
               </div>
-              <p class="example__costs">Затраты на питание: 15 000 РУБ.</p>
             </div>
 
             <div class="example__range-filter range-filter">
               <div class="range-filter__img-wrapper">
                 <img class="range-filter__cat" src="img/fat-cat.png" width="311" height="232" alt="Толстый кот">
                 <img class="range-filter__cat-tablet" src="img/fat-cat-tablet.png" width="708" height="620" alt="Толстый кот">
-              </div>
+                <img class="range-filter__cat-desktop" src="img/fat-cat-desktop.png" width="708" height="620" alt="Толстый кот">
+               </div>
               <div class="range-filter__wrapper">
                 <button class="range-filter__button" type="button" name="were">было</button>
                 <div class="range-filter__scale">
                   <div class="range-filter__bar"></div>
-                  <div class="range-filter__toggle" aria-label="Скрол"></div>
+                  <div class="range-filter__toggle">
+                    <div class="range-filter__toggle-green"></div>
+                  </div>
                 </div>
                 <button class="range-filter__button" type="button" name="have-been">стало</button>
               </div>
@@ -146,7 +161,7 @@
             <p class="contacts__invite">приглашаем <br>к сотрудничеству дилеров!</p>
             <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </div>
-          <iframe class="contacts__map"; src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002983!2d30.32085871593242!3d59.93871916905438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1617970093934!5m2!1sru!2skz"
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002983!2d30.32085871593242!3d59.93871916905438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1617970093934!5m2!1sru!2skz"
           width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 

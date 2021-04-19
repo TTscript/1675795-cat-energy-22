@@ -2,11 +2,16 @@
   text-align: center;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .page-header__nav {
   @media (min-width: $tablet-width) {
     display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -44,6 +49,18 @@
   display: none;
 
   @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
     display: block;
   }
 }
