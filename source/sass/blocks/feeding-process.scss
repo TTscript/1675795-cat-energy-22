@@ -3,8 +3,13 @@
   padding: 0 20px 0 20px;
   margin: 0 0 42px 0;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 120px;
+  }
+
   @media (min-width: $desktop-width) {
     padding: 0 110px;
+    max-width: 1220px;
   }
 }
 
@@ -78,6 +83,7 @@
     }
 
     display: inline-block;
+    vertical-align: baseline;
     margin: 0 20px 0 0;
     padding: 0;
   }

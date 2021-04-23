@@ -2,33 +2,21 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s all;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-around;
     gap: 33px;
     margin-left: auto;
+    max-height: 100%;
+    transition: none;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    background: url("../img/index-background-desktop.jpg") no-repeat;
-    min-width: 720px;
-    min-height: 694px;
-    position: relative;
-    z-index: 1;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: $basic-green;
-      min-width: 720px;
-      min-height: 694px;
-      opacity: 0.85;
-      z-index: -1;
-    }
+    z-index: 3;
   }
 }
 
@@ -70,4 +58,10 @@
   @media (min-width: $desktop-width) {
     @include fonts($fontOswaldRegular, 400, normal, 20px, 30px, $basic-white);
   }
+}
+
+.site-list--burger-menu {
+  max-height: 200px;
+  overflow: hidden;
+  transition: 1s all;
 }

@@ -4,6 +4,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 110px;
+    max-width: 1200px;
   }
 }
 
@@ -39,7 +40,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    align-self: center;
+    text-align: center;
   }
 }
 
@@ -60,64 +61,62 @@
 }
 
 .selections-programm__item--cat-sit-img {
-  @media (min-width: $tablet-width) {
-    position: relative;
-
-    &::after {
-      content: url("../img/decor.elements/big-cat-sit.svg");
-      position: absolute;
-      top: 30px;
-      right: 50px;
-
-      @media (min-width: $desktop-width) {
-        display: none;
-      }
-    }
-  }
-
   &::before {
-    content: url("../img/decor.elements/cat-sit.svg");
+    content: "";
+    background: url("../img/decor.elements/cat-sit.svg") no-repeat;
+    transform: translateY(40%);
+    width: 50px;
+    height: 53px;
     display: inline-block;
-    padding-top: 20px;
+    vertical-align: baseline;
 
     @media (min-width: $tablet-width) {
-      display: none;
+      float: right;
+      width: 200px;
+      height: 211px;
+      background-size: contain;
+      transform: translate(-5%, 5%);
+      padding: 20px;
+    }
 
-      @media (min-width: $desktop-width) {
-        display: inline-block;
-        margin-right: 50px;
-      }
+    @media (min-width: $desktop-width) {
+      float: none;
+      display: inline-block;
+      width: 100px;
+      height: 106px;
+      margin-right: 50px;
     }
   }
 }
 
 .selections-programm__item--cat-walk-img {
-  @media (min-width: $tablet-width) {
-    position: relative;
-
-    &::after {
-      content: url("../img/decor.elements/big-cat-walk.svg");
-      position: absolute;
-      top: 30px;
-      right: 20px;
-
-      @media (min-width: $desktop-width) {
-        display: none;
-      }
-    }
-  }
+  position: relative;
 
   &::before {
-    content: url("../img/decor.elements/cat-walk.svg");
+    content: "";
+    background: url("../img/decor.elements/cat-walk.svg") no-repeat;
+    transform: translateY(40%);
+    width: 67px;
+    height: 50px;
     display: inline-block;
-    padding-top: 20px;
+    vertical-align: baseline;
+    position: relative;
 
     @media (min-width: $tablet-width) {
-      display: none;
+      float: right;
+      width: 268px;
+      height: 200px;
+      background-size: contain;
+      transform: translateY(10%);
+      padding: 20px;
     }
 
     @media (min-width: $desktop-width) {
       display: inline-block;
+      vertical-align: baseline;
+      float: none;
+      width: 134px;
+      height: 100px;
       margin-right: 50px;
     }
   }

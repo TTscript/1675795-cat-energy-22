@@ -1,19 +1,39 @@
+.range-filter {
+  @media (min-width: $tablet-width) {
+    background-color: $bg-example;
+    min-height: 462px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    position: relative;
+    min-height: auto;
+    margin-top: auto;
+  }
+}
+
 .range-filter__img-wrapper {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .range-filter__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 40px;
+  }
 }
 
 .range-filter__scale {
-  @media (min-width: $tablet-width) {
-    background-color: transparent;
-    border: 0;
-    width: 428px;
-  }
   width: 84px;
   height: 14px;
   border: 1px solid $scale-color;
@@ -21,6 +41,13 @@
   margin: 0 5px 0 0;
   position: relative;
   background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    border: 0;
+    width: 428px;
+    position: relative;
+  }
 }
 
 .range-filter__bar {
@@ -43,6 +70,7 @@
   border: none;
   border-bottom: 1px dashed $border-dashed-color;
   text-transform: uppercase;
+  outline: 0;
   padding: 0;
   margin: 0;
 
@@ -50,7 +78,8 @@
     margin: 0 5px 0 0;
   }
 
-  &:hover {
+  &:hover,
+  :focus {
     border-bottom: 1px solid $border-solid-color;
   }
 
@@ -60,32 +89,28 @@
 }
 
 .range-filter__cat {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
+  height: 232px;
 
-.range-filter__cat-tablet {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-}
-
-.range-filter__cat-desktop {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: block;
+  @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     position: absolute;
-    top: -500px;
-    right: 40px;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 709px;
+    height: 620px;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -550px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.range-filter__thin-cat {
+  display: none;
 }
 
 .range-filter__toggle {
@@ -121,4 +146,12 @@
     background-color: $basic-green;
     border-radius: 50%;
   }
+}
+
+.range-filter__appear-cat {
+  display: block;
+}
+
+.range-filter__disappear-cat {
+  display: none;
 }

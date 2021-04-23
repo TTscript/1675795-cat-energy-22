@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico"> <!-- 32x32 -->
@@ -11,33 +12,32 @@
   </head>
 
   <body class="page-body">
-    <div class="body-inner">
 
       <header class="page-header">
-        <nav class="page-header__nav main-nav">
-
+        <nav class="page-header__nav">
           <div class="page-header__wrapper">
-            <div class="page-header__logo-stroke">
-              <a class="logo logo--hover-active">
+              <a class="logo">
                 <img src="img/logo.svg" width="33" height="38" alt="Логотип cat energy">
               </a>
-              <a class="logo logo--hover-active">
+              <a class="logo">
                 <img src="img/logo-2-cat-energy.svg" width="101" height="18" alt="Текст логотипа">
               </a>
-              <button class="page-header__toggle" type="button"></button>
-            </div>
+
+                <div class="burger-menu" tabindex="1">
+                  <div class="burger-menu__line burger-menu__line--first-translate"></div>
+                  <div class="burger-menu__line burger-menu__line--second-rotate"></div>
+                  <div class="burger-menu__line burger-menu__line--third-rotate"></div>
+                  <div class="burger-menu__line burger-menu__line--fourth-translate"></div>
+                </div>
+
           </div>
 
-          <a class="page-header__logo-tablet">
-            <img src="img/logo-tablet.svg" width="174" height="51" alt="Логотип cat energy">
+          <a class="logo">
+            <img class="page-header__logo-tablet" src="img/logo-tablet.svg" width="174" height="51" alt="Логотип cat energy">
+            <img  class="page-header__logo-desktop" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип cat energy">
           </a>
 
-          <a class="page-header__logo-desktop">
-            <img src="img/logo-desktop.svg" width="202" height="59" alt="Логотип cat energy">
-          </a>
-
-          <div class="page-header__desktop-back">
-            <ul class="main-nav__list site-list">
+            <ul class="site-list">
 
             <li class="site-list__item">
               <a class="site-list__item-title site-list__item-title--current-item">главная</a>
@@ -49,11 +49,10 @@
 
             <li class="site-list__item">
               <a class="site-list__item-title" href="form.html">подбор программы</a>
-
             </li>
 
             </ul>
-          </div>
+
 
         </nav>
       </header>
@@ -61,7 +60,7 @@
       <main class="page-main">
 
         <section class="product-info">
-          <div class="product-info__wrapper product-info__background-cat">
+          <div class="product-info__wrapper">
             <div class="product-info__inner">
               <h1 class="product-info__title">Функциональное питание для котов</h1>
               <p class="product-info__slogan">Занялся собой? Займись котом!</p>
@@ -73,7 +72,7 @@
 
         <section class="selections-programm">
           <h2 class="visually-hidden">Подбор программы для вашего кота</h2>
-          <div class="selections-programm__wrapper section-wrapper">
+          <div class="selections-programm__wrapper">
             <ul class="selections-programm__list">
               <li class="selections-programm__item selections-programm__item--cat-sit-img">
                 <h3 class="selections-programm__item-title">похудение</h3>
@@ -94,7 +93,7 @@
         </section>
 
         <section class="feeding-process">
-          <div class="feeding-process__wrapper section-wrapper">
+          <div class="feeding-process__wrapper">
             <h2 class="feeding-process__title">Как это работает</h2>
             <ol class="feeding-process__list">
               <li class="feeding-process__item feeding-process__item--sheet">
@@ -115,7 +114,7 @@
 
         <section class="example">
           <h2 class="example__title">Живой пример</h2>
-          <div class="example__wrapper section-wrapper">
+          <div class="example__wrapper">
 
             <div class="example__desktop-column-wrapper">
               <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
@@ -133,21 +132,20 @@
               </div>
             </div>
 
-            <div class="example__range-filter range-filter">
+            <div class="range-filter">
               <div class="range-filter__img-wrapper">
-                <img class="range-filter__cat" src="img/fat-cat.png" width="311" height="232" alt="Толстый кот">
-                <img class="range-filter__cat-tablet" src="img/fat-cat-tablet.png" width="708" height="620" alt="Толстый кот">
-                <img class="range-filter__cat-desktop" src="img/fat-cat-desktop.png" width="708" height="620" alt="Толстый кот">
+                <img class="range-filter__cat range-filter__fat-cat" src="img/fat-cat.png" width="311" height="232" alt="Толстый кот">
+                <img class="range-filter__cat range-filter__thin-cat" src="img/thin-cat.png" width="311" height="232" alt="Худой кот">
               </div>
               <div class="range-filter__wrapper">
-                <button class="range-filter__button" type="button" name="were">было</button>
+                <button class="range-filter__button range-filter__button-were" type="button" name="were">было</button>
                 <div class="range-filter__scale">
                   <div class="range-filter__bar"></div>
                   <div class="range-filter__toggle">
                     <div class="range-filter__toggle-green"></div>
                   </div>
                 </div>
-                <button class="range-filter__button" type="button" name="have-been">стало</button>
+                <button class="range-filter__button range-filter__button-have-been" type="button" name="have-been">стало</button>
               </div>
             </div>
           </div>
@@ -155,7 +153,6 @@
       </main>
 
       <footer class="page-footer">
-
         <div class="contacts">
           <div class="contacts__wrapper">
             <p class="contacts__invite">приглашаем <br>к сотрудничеству дилеров!</p>
@@ -164,7 +161,6 @@
           <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002983!2d30.32085871593242!3d59.93871916905438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1617970093934!5m2!1sru!2skz"
           width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-
         <div class="page-footer__inner">
           <div class="footer-logo">
             <a class="footer-logo__img logo logo--hover-active" href="#">
@@ -191,7 +187,51 @@
 
       </footer>
 
-    </div>
+    <script>
+        //burger-menu
+      let burgerButton = document.querySelector('.burger-menu');
+      let burgerMenu = document.querySelector('.site-list');
+
+      burgerButton.addEventListener('click', function () {
+
+        let lineOne = document.querySelector('.burger-menu__line--first-translate');
+        lineOne.classList.toggle('burger-menu__line--first');
+
+        let lineTwo = document.querySelector('.burger-menu__line--second-rotate');
+        lineTwo.classList.toggle('burger-menu__line--second');
+
+        let lineThree = document.querySelector('.burger-menu__line--third-rotate');
+        lineThree.classList.toggle('burger-menu__line--third');
+
+        let lineFour = document.querySelector('.burger-menu__line--fourth-translate');
+        lineFour.classList.toggle('burger-menu__line--fourth');
+
+        burgerMenu.classList.toggle('site-list--burger-menu');
+
+      });
+
+        //cats
+      let were = document.querySelector('.range-filter__button-were');
+      let haveBeen = document.querySelector('.range-filter__button-have-been');
+      let fatCat = document.querySelector('.range-filter__fat-cat');
+      let thinCat = document.querySelector('.range-filter__thin-cat');
+      were.addEventListener('click', function () {
+        fatCat.classList.remove('range-filter__disappear-cat');
+        thinCat.classList.remove('range-filter__appear-cat');
+        fatCat.classList.add('range-filter__appear-cat');
+        thinCat.classList.add('range-filter__disappear-cat');
+      });
+      haveBeen.addEventListener('click', function () {
+        fatCat.classList.remove('range-filter__appear-cat');
+        thinCat.classList.remove('range-filter__disappear-cat');
+        fatCat.classList.add('range-filter__disappear-cat');
+        thinCat.classList.add('range-filter__appear-cat');
+        console.log();
+      });
+
+
+
+    </script>
   </body>
 
 </html>
