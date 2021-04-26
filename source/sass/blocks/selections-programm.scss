@@ -61,6 +61,8 @@
 }
 
 .selections-programm__item--cat-sit-img {
+  position: relative;
+
   &::before {
     content: "";
     background: url("../img/decor.elements/cat-sit.svg") no-repeat;
@@ -70,21 +72,22 @@
     display: inline-block;
     vertical-align: baseline;
 
-    @media (min-width: $tablet-width) {
-      float: right;
+    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+      position: absolute;
+      top: -30%;
+      left: 65%;
       width: 200px;
       height: 211px;
       background-size: contain;
-      transform: translate(-5%, 5%);
       padding: 20px;
     }
 
     @media (min-width: $desktop-width) {
-      float: none;
-      display: inline-block;
+      transform: translateY(0);
       width: 100px;
       height: 106px;
       margin-right: 50px;
+      background-size: contain;
     }
   }
 }
@@ -102,22 +105,23 @@
     vertical-align: baseline;
     position: relative;
 
-    @media (min-width: $tablet-width) {
-      float: right;
+    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+      position: absolute;
+      top: -25%;
+      left: 60%;
       width: 268px;
       height: 200px;
       background-size: contain;
-      transform: translateY(10%);
       padding: 20px;
     }
 
     @media (min-width: $desktop-width) {
-      display: inline-block;
-      vertical-align: baseline;
-      float: none;
+      transform: translateY(0);
       width: 134px;
       height: 100px;
       margin-right: 50px;
+      background-size: contain;
+      margin-top: 10px;
     }
   }
 }

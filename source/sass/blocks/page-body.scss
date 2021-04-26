@@ -3,6 +3,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    max-width: 2120px;
   }
 
   display: flex;
@@ -12,5 +13,4 @@
   background-color: $basic-white;
   margin: 0 auto;
   padding: 0;
-  overflow-x: hidden;
 }

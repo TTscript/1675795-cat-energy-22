@@ -5,6 +5,10 @@
   cursor: pointer;
   border: 0;
   outline: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .burger-menu__line {

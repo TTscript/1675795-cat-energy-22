@@ -15,27 +15,22 @@
 
       <header class="page-header">
         <nav class="page-header__nav">
+
           <div class="page-header__wrapper">
-              <a class="logo">
-                <img src="img/logo.svg" width="33" height="38" alt="Логотип cat energy">
-              </a>
-              <a class="logo">
-                <img src="img/logo-2-cat-energy.svg" width="101" height="18" alt="Текст логотипа">
-              </a>
+            <a class="page-header__logo">
+              <img class="page-header__logo-mobile" src="img/logo.svg" width="33" height="38" alt="Логотип cat energy">
+              <img class="page-header__logo-mobile-text" src="img/logo-2-cat-energy.svg" width="101" height="18" alt="Текст логотипа">
+              <img class="page-header__logo-tablet" src="img/logo-tablet.svg" width="174" height="52" alt="Логотип cat energy">
+              <img class="page-header__logo-desktop" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип cat energy">
+            </a>
 
-                <div class="burger-menu" tabindex="1">
-                  <div class="burger-menu__line burger-menu__line--first-translate"></div>
-                  <div class="burger-menu__line burger-menu__line--second-rotate"></div>
-                  <div class="burger-menu__line burger-menu__line--third-rotate"></div>
-                  <div class="burger-menu__line burger-menu__line--fourth-translate"></div>
-                </div>
-
+            <div class="burger-menu" tabindex="1">
+              <div class="burger-menu__line burger-menu__line--first-translate"></div>
+              <div class="burger-menu__line burger-menu__line--second-rotate"></div>
+              <div class="burger-menu__line burger-menu__line--third-rotate"></div>
+              <div class="burger-menu__line burger-menu__line--fourth-translate"></div>
+            </div>
           </div>
-
-          <a class="logo">
-            <img class="page-header__logo-tablet" src="img/logo-tablet.svg" width="174" height="51" alt="Логотип cat energy">
-            <img  class="page-header__logo-desktop" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип cat energy">
-          </a>
 
             <ul class="site-list">
 
@@ -53,7 +48,6 @@
 
             </ul>
 
-
         </nav>
       </header>
 
@@ -65,7 +59,12 @@
               <h1 class="product-info__title">Функциональное питание для котов</h1>
               <p class="product-info__slogan">Занялся собой? Займись котом!</p>
             </div>
-            <img class="product-info__picture" src="img/product.png" width="280" height="270" alt="Фото продукта">
+            <picture>
+              <source srcset="img/product-desktop.png" media="(min-width:1220px)" type="image/png">
+              <source srcset="img/product-tablet.png" media="(min-width:768px)" type="image/png">
+              <img class="product-info__picture" src="img/product-mobile.png" width="280" height="270" alt="Фото продукта">
+            </picture>
+
             <p><a class="product-info__button-tablet button" href="form.html">подобрать программу</a></p>
           </div>
         </section>
@@ -188,11 +187,18 @@
       </footer>
 
     <script>
+      //if-no-js
+      let burgerMenu = document.querySelector('.site-list');
+      burgerMenu.classList.add('site-list__join-js');
+
         //burger-menu
       let burgerButton = document.querySelector('.burger-menu');
-      let burgerMenu = document.querySelector('.site-list');
+      let transition = document.querySelector('.site-list__transition');
 
       burgerButton.addEventListener('click', function () {
+
+
+        burgerMenu.classList.toggle('site-list__transition');
 
         let lineOne = document.querySelector('.burger-menu__line--first-translate');
         lineOne.classList.toggle('burger-menu__line--first');

@@ -37,7 +37,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 69%;
     margin-bottom: 60px;
   }
 }
@@ -54,7 +53,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 55px;
-    width: 60%;
+    min-width: 80%;
   }
 }
 
@@ -138,7 +137,6 @@
 .example__wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: space-between;
     max-width: 1220px;
   }
 }
@@ -150,5 +148,6 @@
 
   @media (min-width: $desktop-width) {
     padding: 50px  0 0 30px;
+    width: 45%;
   }
 }
