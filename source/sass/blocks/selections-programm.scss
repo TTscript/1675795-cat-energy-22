@@ -1,11 +1,6 @@
 .selections-programm {
   padding: 0 20px;
   margin: 0 0 27px 0;
-
-  @media (min-width: $desktop-width) {
-    padding: 0 110px;
-    max-width: 1200px;
-  }
 }
 
 .selections-programm__list {
@@ -17,6 +12,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+  }
+}
+
+.selections-programm__wrapper {
+  @media (min-width: $desktop-width) {
+    padding: 0 50px;
+    max-width: 1220px;
+    margin: 0 auto;
   }
 }
 

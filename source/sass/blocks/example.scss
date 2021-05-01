@@ -12,6 +12,12 @@
   }
 }
 
+.example__title-wrapper {
+  @media (min-width: $desktop-width) {
+    background-color: $basic-white;
+  }
+}
+
 .example__title {
   @include fonts($fontOswaldRegular, 400, normal, 36px, 40px, $black);
   margin: 0 0 33px 0;
@@ -22,9 +28,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $basic-white;
-    padding-bottom: 76px;
-    padding-left: 110px;
+    max-width: 1220px;
+    padding: 0 50px 76px 50px;
+    margin: 0 auto;
   }
 }
 
@@ -138,6 +144,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     max-width: 1220px;
+    margin: 0 auto;
   }
 }
 
