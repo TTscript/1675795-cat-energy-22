@@ -12,9 +12,6 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
-    background: url("../img/index-background-desktop.jpg");
-    background-position: 610px 50%;
-    background-repeat: no-repeat;
     height: 696px;
     margin: -160px 0 82px 0;
     padding-top: 100px;
@@ -23,11 +20,10 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 610px;
-      background-color: $basic-green;
-      width: 100%;
+      left: 50%;
+      width: 50%;
       height: 100%;
-      opacity: 0.85;
+      background: linear-gradient(to right, $green-opacity, $green-opacity), url("../../img/index-background-desktop.jpg") no-repeat;
     }
   }
 }
@@ -61,7 +57,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 1220px;
+    max-width: 1320px;
     padding: 0 50px;
     margin: 0 auto;
   }

@@ -8,7 +8,8 @@
 
   @media (min-width: $desktop-width) {
     background-color: $bg-example;
-    padding-top: 0;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -28,7 +29,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1220px;
+    max-width: 1320px;
     padding: 0 50px 76px 50px;
     margin: 0 auto;
   }
@@ -143,7 +144,7 @@
 .example__wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
-    max-width: 1220px;
+    max-width: 1320px;
     margin: 0 auto;
   }
 }
