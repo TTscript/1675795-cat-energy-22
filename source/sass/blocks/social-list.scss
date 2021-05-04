@@ -7,42 +7,106 @@
   width: 50%;
   padding: 25px 0 25px 0;
   margin: 0;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 129px;
+  }
 }
 
 .social-list__social-item--vkontakte {
   &::before {
-    content: url("../img/icon-vkontakte.svg");
+    content: "";
+    background: url("../img/icon-vkontakte.svg") no-repeat;
+    width: 23px;
+    height: 16px;
     display: block;
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      background: url("../img/icon-vkontakte.svg") no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 22px;
+      display: block;
+    }
   }
 
   &:hover {
     content: url("../img/vkontakte-hover.svg");
     width: 23px;
     height: 16px;
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 22px;
+    }
   }
 }
 
 .social-list__social-item--instagram {
   &::before {
-    content: url("../img/icon-instagram.svg");
+    content: "";
+    background: url("../img/icon-instagram.svg") no-repeat;
+    width: 16px;
+    height: 16px;
     display: block;
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      background: url("../img/icon-instagram.svg") no-repeat;
+      background-size: contain;
+      width: 23px;
+      height: 23px;
+      display: block;
+    }
   }
 
   &:hover {
     content: url("../img/instagram-hover.svg");
     width: 16px;
     height: 16px;
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
   }
 }
 
 .social-list__social-item--facebook {
   &::before {
-    content: url("../img/icon-facebook.svg");
+    content: "";
+    background: url("../img/icon-facebook.svg") no-repeat;
+    width: 22px;
+    height: 22px;
     display: block;
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      background: url("../img/icon-facebook.svg") no-repeat;
+      background-size: contain;
+      width: 33px;
+      height: 28px;
+      display: block;
+    }
   }
 
   &:hover {
     content: url("../img/facebook-hover.svg");
+    width: 22px;
+    height: 22px;
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      width: 33px;
+      height: 28px;
+    }
   }
 }
 

@@ -2,9 +2,25 @@
   text-align: left;
   padding: 0 20px 0 20px;
   margin: 0 0 42px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 120px;
+  }
+}
+
+.feeding-process__wrapper {
+  @media (min-width: $desktop-width) {
+    padding: 0 50px;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
 }
 
 .feeding-process__title {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(60px, 60px, $black);
+  }
+
   @include fonts($fontOswaldRegular, 400, normal, 36px, 40px, $black);
   margin: 0 0 38px 0;
   padding: 0;
@@ -14,9 +30,43 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 90px;
+    column-gap: 150px;
+    counter-reset: list;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 0;
+  }
 }
 
-.feeding-process__item {
+.feeding-process__list .feeding-process__item {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      @include fonts($fontOswaldRegular, 400, normal, 280px, 0, $btn-color);
+      display: flex;
+      counter-increment: list;
+      content: counter(list) "";
+      position: absolute;
+      top: 60%;
+      right: 10%;
+      z-index: -1;
+
+      @media (min-width: $desktop-width) {
+        top: 50%;
+      }
+    }
+  }
+
+  position: relative;
+  z-index: 1;
   margin: 0 0 20px 0;
   padding: 0;
   display: inline-block;
@@ -27,7 +77,16 @@
   }
 
   &::before {
+    @media (min-width: $tablet-width) {
+      display: block;
+      margin-bottom: 31px;
+      background-size: cover;
+      width: 80px;
+      height: 80px;
+    }
+
     display: inline-block;
+    vertical-align: baseline;
     margin: 0 20px 0 0;
     padding: 0;
   }
@@ -35,29 +94,49 @@
 
 .feeding-process__item--sheet {
   &::before {
-    content: url("../img/decor.elements/sheet.svg");
+    content: "";
+    background: url("../img/decor.elements/sheet.svg");
+    width: 60px;
+    height: 60px;
   }
 }
 
 .feeding-process__item--powder {
   &::before {
-    content: url("../img/decor.elements/powder.svg");
+    content: "";
+    background: url("../img/decor.elements/powder.svg");
+    width: 60px;
+    height: 60px;
   }
 }
 
 .feeding-process__item--cutlery {
   &::before {
-    content: url("../img/decor.elements/cutlery.svg");
+    content: "";
+    background: url("../img/decor.elements/cutlery.svg");
+    width: 60px;
+    height: 60px;
   }
 }
 
 .feeding-process__item--scales {
   &::before {
-    content: url("../img/decor.elements/scales.svg");
+    content: "";
+    background: url("../img/decor.elements/scales.svg");
+    width: 60px;
+    height: 60px;
   }
 }
 
 .feeding-process__item-description {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(16px, 24px);
+    width: 100%;
+
+    &:last-of-type {
+      width: 90%;
+    }
+  }
   width: 70%;
   display: inline-block;
   margin: 0;

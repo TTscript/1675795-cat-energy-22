@@ -1,11 +1,36 @@
+.range-filter {
+  @media (min-width: $tablet-width) {
+    background-color: $bg-example;
+    min-height: 462px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    position: relative;
+    min-height: auto;
+    margin-top: auto;
+  }
+}
+
 .range-filter__img-wrapper {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .range-filter__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 40px;
+  }
 }
 
 .range-filter__scale {
@@ -16,6 +41,13 @@
   margin: 0 5px 0 0;
   position: relative;
   background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    border: 0;
+    width: 428px;
+    position: relative;
+  }
 }
 
 .range-filter__bar {
@@ -26,6 +58,11 @@
   position: absolute;
   top: 3px;
   left: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    background-color: $scale-tablet;
+  }
 }
 
 .range-filter__button {
@@ -33,6 +70,8 @@
   border: none;
   border-bottom: 1px dashed $border-dashed-color;
   text-transform: uppercase;
+  cursor: pointer;
+  outline: 0;
   padding: 0;
   margin: 0;
 
@@ -40,11 +79,80 @@
     margin: 0 5px 0 0;
   }
 
-  &:hover {
+  &:hover,
+  :focus {
     border-bottom: 1px solid $border-solid-color;
   }
 
   &:active {
     border: none;
   }
+}
+
+.range-filter__cat {
+  height: 232px;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 709px;
+    height: 620px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -550px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.range-filter__thin-cat {
+  display: none;
+}
+
+.range-filter__toggle {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: -11px;
+    left: 214px;
+    width: 34px;
+    height: 34px;
+    background-color: $basic-white;
+    border-radius: 55%;
+    border: 1px solid $scale-color;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+
+    &:hover {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+      border: 1px solid $basic-green;
+    }
+  }
+}
+
+.range-filter__toggle-green {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    background-color: $basic-green;
+    border-radius: 50%;
+  }
+}
+
+.range-filter__appear-cat {
+  display: block;
+}
+
+.range-filter__disappear-cat {
+  display: none;
 }

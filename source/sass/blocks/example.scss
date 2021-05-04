@@ -1,23 +1,67 @@
 .example {
   padding: 20px 0 30px 0;
   background-color: $bg-example;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $bg-example;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.example__title-wrapper {
+  @media (min-width: $desktop-width) {
+    background-color: $basic-white;
+  }
 }
 
 .example__title {
   @include fonts($fontOswaldRegular, 400, normal, 36px, 40px, $black);
   margin: 0 0 33px 0;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(60px, 60px, $black);
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1320px;
+    padding: 0 50px 76px 50px;
+    margin: 0 auto;
+  }
 }
 
 .example__description {
   margin: 0 0 25px 0;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(16px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .example__results-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 0 auto 25px auto;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+    min-width: 80%;
+  }
 }
 
 .example__costs {
@@ -26,6 +70,23 @@
   text-align: center;
   margin: 0 0 42px 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 20px, $black);
+    width: 25%;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    text-align: left;
+  }
+}
+
+.example__costs-text {
+  @media (min-width: $desktop-width) {
+    margin-right: 60px;
+  }
 }
 
 .example__results {
@@ -34,9 +95,19 @@
   max-width: 55%;
   margin: 0 auto 0 auto;
   padding: 10px 0 0 0;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(14px, 14px);
+    max-width: 100%;
+    padding-top: 15px;
+  }
 }
 
 .example__results-title {
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(30px, 37px, $black);
+  }
+
   @include fonts($fontOswaldRegular, 400, normal, 24px, 24px, $black);
   display: block;
   margin-bottom: 12px;
@@ -45,4 +116,46 @@
 .example__border-wrapper {
   background: url("../img/decor.elements/weight-back.svg") no-repeat 50% 0;
   width: 48%;
+
+  @media (min-width: $tablet-width) {
+    background-size: 162px, 77px;
+    width: 300px;
+    margin-right: 10px;
+  }
+}
+
+.example__tablet-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.example__results-subtitle {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 90%;
+}
+
+.example__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+.example__desktop-column-wrapper {
+  @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin-bottom: 260px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px  0 0 30px;
+    width: 45%;
+  }
 }

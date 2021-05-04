@@ -1,13 +1,29 @@
 .academy-logo {
   padding: 0 20px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 }
 
 .academy-logo__link {
-  color: $simple-text;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  color: $simple-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 163px;
+  }
 }
 
 .academy-logo__link:hover svg {

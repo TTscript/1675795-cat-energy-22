@@ -2,6 +2,22 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  max-height: 200px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    gap: 33px;
+    margin-left: auto;
+    max-height: 100%;
+    transition: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 3;
+    padding-right: 30px;
+  }
 }
 
 .site-list__item {
@@ -9,6 +25,10 @@
   padding: 22px 0;
   border-bottom: 1px solid $header-menu-line;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    border: 0;
+  }
 
   &:last-of-type {
     margin: 0;
@@ -25,9 +45,33 @@
 
 .site-list__item-title--current-item {
   border-bottom: 2px solid $basic-green;
+
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid $basic-white;
+  }
 }
 
 .site-list__item-title {
   @include fonts($fontOswaldMedium, 500, normal, 20px, 20px, $black);
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    @include fonts($fontOswaldRegular, 400, normal, 20px, 30px, $basic-white);
+  }
+}
+
+.site-list__join-js {
+  @media (max-width: $mobile-only) {
+    max-height: 0;
+  }
+}
+
+.site-list--burger-menu {
+  max-height: 200px;
+  overflow: hidden;
+  transition: 1s all;
+}
+
+.site-list__transition {
+  transition: 1s all;
 }

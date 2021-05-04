@@ -1,8 +1,14 @@
 .page-body {
   @include fonts($fontArial, 400, normal, 14px, 18px, $simple-text);
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    max-width: 2120px;
+  }
+
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 100%;
   min-height: 100vh;
   background-color: $basic-white;
   margin: 0 auto;

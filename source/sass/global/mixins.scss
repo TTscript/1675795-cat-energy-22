@@ -6,3 +6,9 @@
   line-height: $line-height;
   color: $font-color;
 }
+
+@mixin fontSizeColor($font-size, $line-height, $font-color: $simple-text) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $font-color;
+}

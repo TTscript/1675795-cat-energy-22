@@ -23,8 +23,16 @@ $radio-button-color: #222222;
 $radio-button-opacity: rgba(34, 34, 34, 0.3);
 $catalog-line: #ebebeb;
 $simple-text-opacity: rgba(68, 68, 68, 0.3);
+$scale-tablet: #dcdcdc;
+$green-opacity: rgba(104, 183, 56, 0.85);
 
 // fonts
 $fontOswaldRegular: "Oswald Regular", "Arial", sans-serif;
 $fontOswaldMedium: "Oswald Medium", "Arial", sans-serif;
 $fontArial: "Arial", sans-serif;
+
+// media
+$mobile-only: 767px;
+$tablet-width: 768px;
+$tablet-max-width: 1219px;
+$desktop-width: 1220px;
