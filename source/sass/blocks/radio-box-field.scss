@@ -2,8 +2,45 @@
   @include fonts($fontOswaldRegular, 400, normal, 14px, 18px);
   text-transform: uppercase;
   border: 0;
-  padding: 27px 20px 25px 20px;
   margin: 0 0 26px 0;
-  border-top: 1px solid $line-color;
-  border-bottom: 1px solid $line-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 27px 20px 25px 20px;
+  }
+
+  &::before,
+  &::after {
+    @media (max-width: $mobile-only) {
+      content: "";
+      position: relative;
+      left: -40px;
+      background-color: $line-color;
+      width: 100vw;
+      height: 1px;
+      display: block;
+    }
+  }
+
+  &::before {
+    @media (max-width: $mobile-only) {
+      top: -20px;
+    }
+  }
+
+  &::after {
+    @media (max-width: $mobile-only) {
+      bottom: -20px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 30px);
+    border: 1px solid $line-color;
+    margin: 0 0 26px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 24px 20px 0 20px;
+    margin: 0;
+  }
 }

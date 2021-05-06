@@ -11,18 +11,29 @@
   @include fonts($fontOswaldRegular, 400, normal, 16px, 18px, $black);
   text-transform: uppercase;
   position: relative;
-  cursor: pointer;
   top: 0;
-  padding-left: 40px;
+  left: 40px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 30px);
+    left: 50px;
+  }
 
   &::before {
     content: "";
     position: absolute;
     top: -2px;
-    left: 0;
+    left: -40px;
     width: 30px;
     height: 30px;
     border: 1px solid $scale-color;
+
+    @media (min-width: $tablet-width) {
+      left: -50px;
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
@@ -43,10 +54,16 @@
       content: "";
       position: absolute;
       top: -2px;
-      left: 0;
+      left: -40;
       width: 30px;
       height: 30px;
       border: 1px solid $check-box-hover;
+
+      @media (min-width: $tablet-width) {
+        left: -50px;
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
@@ -55,7 +72,12 @@
       content: url("../img/decor.elements/checkbox-checked.svg");
       position: absolute;
       top: 4px;
-      left: 5px;
+      left: -35px;
+
+      @media (min-width: $tablet-width) {
+        top: 2px;
+        left: -38px;
+      }
     }
   }
 
@@ -64,10 +86,16 @@
       content: "";
       position: absolute;
       top: -2px;
-      left: 0;
+      left: -40px;
       width: 30px;
       height: 30px;
       border: 1px solid $check-box-disabled;
+
+      @media (min-width: $tablet-width) {
+        left: -50px;
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
@@ -76,8 +104,13 @@
       content: url("../img/decor.elements/checkbox-checked.svg");
       position: absolute;
       top: 4px;
-      left: 5px;
+      left: -35px;
       opacity: 0.3;
+
+      @media (min-width: $tablet-width) {
+        top: 2px;
+        left: -38px;
+      }
     }
   }
 }

@@ -1,23 +1,49 @@
 .comment {
   border: 0;
   padding: 0 20px;
-  position: relative;
   margin: 0 0 22px 0;
+  width: 100%;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: 0;
-    width: 158px;
-    height: 2px;
-    background-color: $basic-green;
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1320px;
+    padding: 0 50px;
+    margin: 0 auto 70px auto;
   }
 }
 
 .comment__title {
   @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
   margin: 0 0 35px 0;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(36px, 36px, $black);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: $basic-green;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &::before {
+    margin-left: -100%;
+    left: -40px;
+  }
+
+  &::after {
+    margin-right: -100%;
+    right: -40px;
+  }
 }
 
 .comment__field {
@@ -26,6 +52,10 @@
   border: 1px solid $entry-box-basic;
   padding: 10px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 30px);
+  }
 
   &:hover {
     border: 1px solid $scale-color;

@@ -2,6 +2,18 @@
   @include fonts($fontOswaldRegular, 400, normal, 36px, 36px, $black);
   padding: 0 20px;
   margin: 0 0 36px 0;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(60px, 60px, $black);
+    margin-bottom: 80px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1320px;
+    padding: 0 50px;
+    margin: 0 auto 80px auto;
+  }
 }
 
 .page-main__logic-connection {
