@@ -29,33 +29,14 @@
   @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
   text-transform: none;
   margin: 0 0 25px 0;
-  display: inline-block;
-  vertical-align: middle;
-  width: 100%;
+  position: relative;
+  left: -30px;
+  z-index: 2;
+  background-color: $basic-white;
+  padding: 0 30px;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(36px, 36px, $black);
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: $basic-green;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  &::before {
-    margin-left: -100%;
-    left: -40px;
-  }
-
-  &::after {
-    margin-right: -100%;
-    right: -40px;
   }
 }
 
