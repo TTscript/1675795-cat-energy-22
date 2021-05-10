@@ -62,23 +62,3 @@
     margin: 0 auto 39px auto;
   }
 }
-
-.shape__green-line {
-  position: relative;
-  top: 15px;
-  width: 100vw;
-  z-index: 1;
-
-  @media (min-width: $tablet-width) {
-    top: 25px;
-  }
-
-  &::after {
-    content: "";
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: $basic-green;
-    display: block;
-  }
-}

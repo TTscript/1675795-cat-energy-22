@@ -17,11 +17,33 @@
 .addition__title {
   @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
   margin: 0 0 34px 0;
-  position: relative;
-  left: -30px;
-  z-index: 2;
-  background-color: $basic-white;
-  padding: 0 30px;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: relative;
+    top: -8px;
+    background-color: $basic-green;
+    width: 300%;
+    height: 1px;
+    display: inline-block;
+    vertical-align: baseline;
+
+    @media (min-width: $tablet-width) {
+      top: -10px;
+    }
+  }
+
+  &::before {
+    margin-left: -300%;
+    left: -20px;
+  }
+
+  &::after {
+    margin-right: -300%;
+    right: -30px;
+  }
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(36px, 36px, $black);
