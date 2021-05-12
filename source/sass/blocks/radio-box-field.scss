@@ -3,28 +3,26 @@
   text-transform: uppercase;
   border: 0;
   padding: 0;
-  margin: 0 0 50px 0;
+  margin: 0;
   position: relative;
   width: 100%;
 
   @media (max-width: $mobile-only) {
     border-top: 1px solid $line-color;
     border-bottom: 1px solid $line-color;
-    padding: 20px 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 27px 20px 25px 20px;
+    padding: 20px;
   }
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(20px, 30px);
     border: 1px solid $line-color;
+    padding: 27px 25px 25px 25px;
     margin: 0 0 26px 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 24px 20px 0 20px;
-    margin: 0;
+    max-width: 1320px;
+    padding: 24px 50px 0 50px;
+    margin: 0 auto;
   }
 }

@@ -16,7 +16,6 @@
     max-width: 1320px;
     padding: 0 50px;
     margin: 0 auto;
-    background-color: aqua;
   }
 }
 
@@ -26,6 +25,10 @@
   justify-content: space-around;
   align-items: center;
   margin: 0 0 28px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
 
   @media (min-width: $desktop-width) {
     position: absolute;
@@ -64,7 +67,7 @@
   padding: 40px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 30px;
+    padding: 40px 70px;
   }
 }
 
