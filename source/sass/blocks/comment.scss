@@ -18,31 +18,30 @@
 .comment__title {
   @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
   margin: 0 0 35px 0;
+  position: relative;
   width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  overflow-x: hidden;
 
   &::before,
   &::after {
     content: "";
-    position: relative;
     background-color: $basic-green;
-    width: 300%;
-    height: 1px;
     display: inline-block;
-    vertical-align: baseline;
-
-    @media (min-width: $tablet-width) {
-      top: -10px;
-    }
+    vertical-align: middle;
+    width: 100%;
+    height: 1px;
+    position: relative;
   }
 
   &::before {
-    margin-left: -300%;
-    left: -20px;
+    margin-left: -100%;
   }
 
   &::after {
-    margin-right: -300%;
-    right: -30px;
+    margin-right: -100%;
+    margin-left: 20px;
   }
 
   @media (min-width: $tablet-width) {

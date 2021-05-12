@@ -5,34 +5,16 @@
   padding: 0;
   margin: 0 0 50px 0;
   position: relative;
+  width: 100%;
+
+  @media (max-width: $mobile-only) {
+    border-top: 1px solid $line-color;
+    border-bottom: 1px solid $line-color;
+    padding: 20px 0;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 27px 20px 25px 20px;
-  }
-
-  &::before,
-  &::after {
-    @media (max-width: $mobile-only) {
-      content: "";
-      position: absolute;
-      left: -20px;
-      background-color: $line-color;
-      width: 300%;
-      height: 1px;
-      display: block;
-    }
-  }
-
-  &::before {
-    @media (max-width: $mobile-only) {
-      top: -20px;
-    }
-  }
-
-  &::after {
-    @media (max-width: $mobile-only) {
-      bottom: -20px;
-    }
   }
 
   @media (min-width: $tablet-width) {
