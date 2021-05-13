@@ -1,21 +1,60 @@
 .addition {
   border: 0;
   padding: 0 20px;
-  position: relative;
   margin: 0 0 40px 0;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -45px;
-    right: 0;
-    width: 136px;
-    height: 2px;
-    background-color: $basic-green;
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1320px;
+    padding: 0 50px;
+    margin: 0 auto 40px auto;
   }
 }
 
 .addition__title {
   @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
   margin: 0 0 34px 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background: $basic-white;
+  padding: 0 30px;
+  margin-left: -30px;
+
+  &::before {
+    content: "";
+    background-color: $basic-green;
+    display: block;
+    width: 100vw;
+    max-width: 1440px;
+    height: 2px;
+    position: absolute;
+    top: 22px;
+    left: -40px;
+    z-index: -1;
+
+    @media (max-width: $mobile-only) {
+      top: 14px;
+      left: 10px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(36px, 36px, $black);
+  }
+}
+
+.addition__inner {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

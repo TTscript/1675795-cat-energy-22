@@ -13,4 +13,53 @@
 .shape__button-wrapper {
   padding: 0 20px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1320px;
+    padding: 0 50px;
+    margin: 0 auto 22px auto;
+  }
+}
+
+.shape__inner {
+  margin: 0 0 30px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1320px;
+    margin: 0 auto 70px auto;
+    padding: 0 50px;
+  }
+}
+
+.shape__programm-text {
+  @include fonts($fontOswaldRegular, 400, normal, 14px, 18px, $black);
+  margin: 0 0 39px 0;
+  text-transform: uppercase;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 30px, $black);
+    padding: 0 70px;
+    margin: 0 0 39px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1320px;
+    padding: 0 50px;
+    margin: 0 auto 39px auto;
+  }
 }

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico"> <!-- 32x32 -->
@@ -12,38 +13,43 @@
 
   <body class="page-body">
 
+    <header class="page-header">
+      <nav class="page-header__nav">
 
-      <header class="page-header page-header--space">
-        <nav class="main-nav">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo" href="index.html">
+            <img class="page-header__logo-mobile" src="img/logo.svg" width="33" height="38" alt="Логотип cat energy">
+            <img class="page-header__logo-mobile-text" src="img/logo-2-cat-energy.svg" width="101" height="18" alt="Текст логотипа">
+            <img class="page-header__logo-tablet" src="img/logo-tablet.svg" width="174" height="52" alt="Логотип cat energy">
+            <img class="page-header__logo-desktop" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип cat energy">
+          </a>
 
-          <div class="page-header__wrapper">
-            <div class="page-header__logo-stroke">
-              <a class="logo logo--hover-active" href="index.html">
-                <img src="img/logo.svg" width="33" height="38" alt="Логотип cat energy">
-              </a>
-              <a class="logo logo--hover-active" href="index.html">
-                <img src="img/logo-2-cat-energy.svg" width="101" height="18" alt="Текст логотипа">
-              </a>
-              <button class="page-header__toggle" type="button"></button>
-            </div>
+          <div class="burger-menu" tabindex="1">
+            <div class="burger-menu__line burger-menu__line--first-translate"></div>
+            <div class="burger-menu__line burger-menu__line--second-rotate"></div>
+            <div class="burger-menu__line burger-menu__line--third-rotate"></div>
+            <div class="burger-menu__line burger-menu__line--fourth-translate"></div>
           </div>
+        </div>
 
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__item-title" href="index.html">главная</a>
-              </li>
+          <ul class="site-list">
 
-              <li class="site-list__item">
-                <a class="site-list__item-title" href="catalog.html">каталог продукции</a>
-              </li>
+          <li class="site-list__item">
+            <a class="site-list__item-title" href="index.html">главная</a>
+          </li>
 
-              <li class="site-list__item">
-                <a class="site-list__item-title site-list__item-title--current-item" href="#">подбор программы</a>
-              </li>
-            </ul>
+          <li class="site-list__item">
+            <a class="site-list__item-title" href="catalog.html">каталог продукции</a>
+          </li>
 
-        </nav>
-      </header>
+          <li class="site-list__item">
+            <a class="site-list__item-title site-list__item-title--current-item" href="form.html">подбор программы</a>
+          </li>
+
+          </ul>
+
+      </nav>
+    </header>
 
       <main class="page-main">
 
@@ -51,62 +57,75 @@
           <h1 class="page-main__title">Подбор программы</h1>
           <form class="shape" action="https://echo.htmlacademy.ru/" method="GET">
 
-            <fieldset class="shape__item questionnaire">
+            <p class="shape__programm-text">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
 
-              <p class="questionnaire__programm-text">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
-              <p class="questionnaire__item">
-                <label class="page-main__logic-connection" for="name">ИМЯ:*</label>
-                <input class="questionnaire__entry-box entry-box entry-box" type="text" name="name" id="name" value="барсик" required>
-              </p>
-              <p class="questionnaire__item">
-                <label class="page-main__logic-connection" for="weight">Вес (кг):*</label>
-                <input class="questionnaire__entry-box entry-box" type="text" name="weight" id="weight" value="7" required>
-              </p>
-              <p class="questionnaire__item">
-                <label class="page-main__logic-connection" for="age">Возраст (лет):</label>
-                <input class="questionnaire__entry-box entry-box" type="text" name="age" id="age" value="7">
-              </p>
-            </fieldset>
+            <div class="shape__inner">
 
-            <fieldset class="radio-box-field">
-              <p class="radio-box">
-                <input class="radio-box__input" type="radio" name="radio" id="lose-weight" value="lose-weight" checked>
-                <label class="radio-box__label page-main__logic-connection" for="lose-weight">похудение</label>
-              </p>
-              <p class="radio-box">
-                <input class="radio-box__input" type="radio" name="radio" id="gain-weight" value="gain-weight">
-                <label class="radio-box__label page-main__logic-connection" for="gain-weight">Набор массы</label>
-              </p>
-              <p class="radio-box">
-                <input class="radio-box__input" type="radio" name="radio" id="advice" value="advice">
-                <label class="radio-box__label page-main__logic-connection" for="advice">Не знаю (Нужен ваш совет)</label>
-              </p>
-            </fieldset>
+              <fieldset class="shape__item questionnaire">
+
+                <p class="questionnaire__item">
+                  <label class="page-main__logic-connection" for="name">ИМЯ:*</label>
+                  <input class="questionnaire__entry-box entry-box entry-box" type="text" name="name" id="name" value="барсик" required>
+                </p>
+                <p class="questionnaire__item">
+                  <label class="page-main__logic-connection" for="weight">Вес (кг):*</label>
+                  <input class="questionnaire__entry-box entry-box" type="text" name="weight" id="weight" value="7" required>
+                </p>
+                <p class="questionnaire__item">
+                  <label class="page-main__logic-connection" for="age">Возраст (лет):</label>
+                  <input class="questionnaire__entry-box entry-box" type="text" name="age" id="age" value="7">
+                </p>
+              </fieldset>
+
+              <fieldset class="radio-box-field">
+                <div class="radio-box-field__inner">
+                  <p class="radio-box">
+                    <input class="radio-box__input" type="radio" name="radio" id="lose-weight" value="lose-weight" checked>
+                    <label class="radio-box__label page-main__logic-connection" for="lose-weight">похудение</label>
+                  </p>
+                  <p class="radio-box">
+                    <input class="radio-box__input" type="radio" name="radio" id="gain-weight" value="gain-weight">
+                    <label class="radio-box__label page-main__logic-connection" for="gain-weight">Набор массы</label>
+                  </p>
+                  <p class="radio-box">
+                    <input class="radio-box__input" type="radio" name="radio" id="advice" value="advice">
+                    <label class="radio-box__label page-main__logic-connection" for="advice">Не знаю (Нужен ваш совет)</label>
+                  </p>
+                </div>
+
+              </fieldset>
+
+            </div>
 
             <fieldset class="shape__item owner-contacts">
-              <legend class="owner-contacts__title">Контактные данные <br> (владельца кота)</legend>
-              <div class="owner-contacts__item">
-                <label class="page-main__logic-connection" for="email">E-mail:*</label>
-                <div class="owner-contacts__item-wrapper">
-                    <input class="owner-contacts__entry-box entry-box entry-box--email-img" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
-                    <svg class="owner-contacts__entry-box-img owner-contacts__entry-box-img--mail" width="20" height="15" fill="none" stroke="#222" xmlns="http://www.w3.org/2000/svg"><path stroke-width="1.3"
-                      d="M1.65 5.85v8M18.65 5.85v8M1 13.2h18M1 1.2h18M18.35 3.03L10 9.53l-8.35-6.5V1.5h16.7v1.53z"/>
-                    </svg>
-                </div>
-              </div>
 
-              <div class="owner-contacts__item">
+                <legend class="owner-contacts__title">Контактные данные <br class="owner-contacts__break"> (владельца кота)</legend>
 
-                <div class="owner-contacts__item-wrapper">
-                  <label class="page-main__logic-connection" for="phone">Телефон:*</label>
-                  <input class="owner-contacts__entry-box entry-box entry-box--phone-img" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
-                    <svg class="owner-contacts__entry-box-img owner-contacts__entry-box-img--phone" width="20" height="21" fill="#000" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0)" ><path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 000-.9l-3.1-3.12-.9.9 2.1 2.01zM8.1 19.79v-6.22a.65.65
-                        0 00-.6-.6H3.1a1.23 1.23 0 001.2 1.2h2.5v5.02H3.1a1.78 1.78 0 01-1.9-1.71V3.43a1.78 1.78 0 011.7-1.8h3.9v5.01H4.4a1.22 1.22 0 00-1.2 1.2h4.4a.65.65 0
-                        00.6-.6V.92a.86.86 0 00-.7-.6H3.1A3 3 0 000 3.23v13.95a2.9 2.9 0 002.9 3.1h4.6a.5.5 0 00.6-.5z"/></g><defs><clipPath id="clip0"><path fill="#fff"
-                          transform="translate(0 .32)" d="M0 0h20v20.07H0z"/></clipPath></defs>
-                    </svg>
+              <div class="owner-contacts__inner">
+
+                <div class="owner-contacts__item">
+                  <label class="page-main__logic-connection" for="email">E-mail:*</label>
+                  <div class="owner-contacts__item-wrapper">
+                      <input class="owner-contacts__entry-box entry-box entry-box--email-img" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
+                      <svg class="owner-contacts__entry-box-img owner-contacts__entry-box-img--mail" width="20" height="15" fill="none" stroke="#222" xmlns="http://www.w3.org/2000/svg"><path stroke-width="1.3"
+                        d="M1.65 5.85v8M18.65 5.85v8M1 13.2h18M1 1.2h18M18.35 3.03L10 9.53l-8.35-6.5V1.5h16.7v1.53z"/>
+                      </svg>
+                  </div>
                 </div>
+
+                <div class="owner-contacts__item">
+                  <div class="owner-contacts__item-wrapper">
+                    <label class="page-main__logic-connection" for="phone">Телефон:*</label>
+                    <input class="owner-contacts__entry-box entry-box entry-box--phone-img" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
+                      <svg class="owner-contacts__entry-box-img owner-contacts__entry-box-img--phone" width="20" height="21" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)" ><path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 000-.9l-3.1-3.12-.9.9 2.1 2.01zM8.1 19.79v-6.22a.65.65
+                          0 00-.6-.6H3.1a1.23 1.23 0 001.2 1.2h2.5v5.02H3.1a1.78 1.78 0 01-1.9-1.71V3.43a1.78 1.78 0 011.7-1.8h3.9v5.01H4.4a1.22 1.22 0 00-1.2 1.2h4.4a.65.65 0
+                          00.6-.6V.92a.86.86 0 00-.7-.6H3.1A3 3 0 000 3.23v13.95a2.9 2.9 0 002.9 3.1h4.6a.5.5 0 00.6-.5z"/></g><defs><clipPath id="clip0"><path fill="#fff"
+                            transform="translate(0 .32)" d="M0 0h20v20.07H0z"/></clipPath></defs>
+                      </svg>
+                  </div>
+                </div>
+
               </div>
             </fieldset>
 
@@ -118,22 +137,24 @@
 
             <fieldset class="shape__item addition">
               <legend class="addition__title">Дополнительно</legend>
-              <p class="addition__item check-box">
-                <input class="addition__check-box check-box__input" type="checkbox" name="sweetener" id="sweetener" checked>
-                <label class="addition__label check-box__label" for="sweetener">сахарозаменитель</label>
-              </p>
-              <p class="addition__item check-box">
-                <input class="addition__check-box check-box__input" type="checkbox" name="drinking-water" id="drinking-water">
-                <label class="addition__label check-box__label" for="drinking-water">питьевая вода</label>
-              </p>
-              <p class="addition__item check-box">
-                <input class="addition__check-box check-box__input" type="checkbox" name="milk" id="milk">
-                <label class="addition__label check-box__label" for="milk">молоко</label>
-              </p>
-              <p class="addition__item check-box">
-                <input class="addition__check-box check-box__input" type="checkbox" name="vitamins" id="vitamins">
-                <label  class="addition__label check-box__label" for="vitamins">витамины</label>
-              </p>
+              <div class="addition__inner">
+                <p class="addition__item check-box">
+                  <input class="addition__check-box check-box__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <label class="addition__label check-box__label" for="sweetener">сахарозаменитель</label>
+                </p>
+                <p class="addition__item check-box">
+                  <input class="addition__check-box check-box__input" type="checkbox" name="drinking-water" id="drinking-water">
+                  <label class="addition__label check-box__label" for="drinking-water">питьевая вода</label>
+                </p>
+                <p class="addition__item check-box">
+                  <input class="addition__check-box check-box__input" type="checkbox" name="milk" id="milk">
+                  <label class="addition__label check-box__label" for="milk">молоко</label>
+                </p>
+                <p class="addition__item check-box">
+                  <input class="addition__check-box check-box__input" type="checkbox" name="vitamins" id="vitamins">
+                  <label  class="addition__label check-box__label" for="vitamins">витамины</label>
+                </p>
+              </div>
             </fieldset>
 
             <div class="shape__button-wrapper">
@@ -147,40 +168,90 @@
       </main>
 
       <footer class="page-footer">
-        <div class="contacts contacts--form-color">
-          <div class="contacts__wrapper">
-            <p class="contacts__invite">приглашаем <br>к сотрудничеству дилеров!</p>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contacts">
+          <div class="contacts__center-wrapper">
+            <div class="contacts__wrapper contacts__form-color">
+              <p class="contacts__invite">приглашаем <br>к сотрудничеству дилеров!</p>
+              <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            </div>
           </div>
-          <div class="contacts__map-wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002983!2d30.32085871593242!3d59.93871916905438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1617970093934!5m2!1sru!2skz"
-            width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002983!2d30.32085871593242!3d59.93871916905438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1617970093934!5m2!1sru!2skz"
+          width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="page-footer__inner">
+          <div class="footer-logo">
+            <a class="footer-logo__img logo logo--hover-active" href="#">
+              <img src="img/logo-2-cat-energy.svg" width="128" height="24" alt="Логотип-текст">
+            </a>
           </div>
+          <div class="social-border-wrapper">
+            <ul class="social-list">
+              <li><a class="social-list__social-item social-list__social-item--vkontakte social-list__social-item--hover-active" href="https://vk.com/" aria-label="Вконтакте"></a></li>
+              <li><a class="social-list__social-item social-list__social-item--instagram social-list__social-item--hover-active" href="https://www.instagram.com/?hl=ru" aria-label="Инстаграм"></a></li>
+              <li><a class="social-list__social-item social-list__social-item--facebook social-list__social-item--hover-active" href="https://www.facebook.com/" aria-label="Фейсбук"></a></li>
+            </ul>
+          </div>
+          <p class="academy-logo">
+            <a class="academy-logo__link" href="https://htmlacademy.ru/intensive/adaptive"> HTML Academy
+              <svg class="academy-logo__img" width="27" height="34"  fill="#666" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02L13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0zm11.6
+                25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26zm0-11.57L22
+                15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8
+                13.58l11.63-6.96 11.8 6.83zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24z"/>
+              </svg>
+            </a>
+          </p>
         </div>
-        <div class="footer-logo">
-          <a class="footer-logo__img logo logo--hover-active" href="index.html">
-            <img src="img/logo-2-cat-energy.svg" width="128" height="24" alt="Логотип-текст">
-          </a>
-        </div>
-        <div class="social-border-wrapper">
-          <ul class="social-list">
-            <li><a class="social-list__social-item social-list__social-item--vkontakte social-list__social-item--hover-active" href="https://vk.com/" aria-label="Вконтакте"></a></li>
-            <li><a class="social-list__social-item social-list__social-item--instagram social-list__social-item--hover-active" href="https://www.instagram.com/?hl=ru" aria-label="Инстаграм"></a></li>
-            <li><a class="social-list__social-item social-list__social-item--facebook social-list__social-item--hover-active" href="https://www.facebook.com/" aria-label="Фейсбук"></a></li>
-          </ul>
-        </div>
-        <p class="academy-logo">
-          <a class="academy-logo__link" href="https://htmlacademy.ru/intensive/adaptive"> HTML Academy
-            <svg class="academy-logo__img" width="27" height="34"  fill="#666" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02L13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0zm11.6
-              25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26zm0-11.57L22
-              15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8
-              13.58l11.63-6.96 11.8 6.83zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24z"/>
-            </svg>
-          </a>
-        </p>
 
       </footer>
 
+    <script>
+      //if-no-js
+      let burgerMenu = document.querySelector('.site-list');
+      burgerMenu.classList.add('site-list__join-js');
 
+        //burger-menu
+      let burgerButton = document.querySelector('.burger-menu');
+      let transition = document.querySelector('.site-list__transition');
+
+      burgerButton.addEventListener('click', function () {
+
+
+        burgerMenu.classList.toggle('site-list__transition');
+
+        let lineOne = document.querySelector('.burger-menu__line--first-translate');
+        lineOne.classList.toggle('burger-menu__line--first');
+
+        let lineTwo = document.querySelector('.burger-menu__line--second-rotate');
+        lineTwo.classList.toggle('burger-menu__line--second');
+
+        let lineThree = document.querySelector('.burger-menu__line--third-rotate');
+        lineThree.classList.toggle('burger-menu__line--third');
+
+        let lineFour = document.querySelector('.burger-menu__line--fourth-translate');
+        lineFour.classList.toggle('burger-menu__line--fourth');
+
+        burgerMenu.classList.toggle('site-list--burger-menu');
+
+      });
+
+        //cats
+      let were = document.querySelector('.range-filter__button-were');
+      let haveBeen = document.querySelector('.range-filter__button-have-been');
+      let fatCat = document.querySelector('.range-filter__fat-cat');
+      let thinCat = document.querySelector('.range-filter__thin-cat');
+      were.addEventListener('click', function () {
+        fatCat.classList.remove('range-filter__disappear-cat');
+        thinCat.classList.remove('range-filter__appear-cat');
+        fatCat.classList.add('range-filter__appear-cat');
+        thinCat.classList.add('range-filter__disappear-cat');
+      });
+      haveBeen.addEventListener('click', function () {
+        fatCat.classList.remove('range-filter__appear-cat');
+        thinCat.classList.remove('range-filter__disappear-cat');
+        fatCat.classList.add('range-filter__disappear-cat');
+        thinCat.classList.add('range-filter__appear-cat');
+        console.log();
+      });
+    </script>
   </body>
 </html>
