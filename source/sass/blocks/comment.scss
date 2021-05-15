@@ -25,26 +25,26 @@
   padding: 0 30px;
   margin-left: -30px;
 
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(36px, 36px, $black);
+  }
+
   &::before {
     content: "";
     background-color: $basic-green;
-    width: 100vw;
-    height: 2px;
     display: block;
+    width: 100vw;
+    max-width: 1440px;
+    height: 2px;
     position: absolute;
     top: 22px;
     left: -40px;
     z-index: -1;
-    max-width: 1440px;
 
     @media (max-width: $mobile-only) {
       top: 14px;
       left: 10px;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    @include fontSizeColor(36px, 36px, $black);
   }
 }
 
