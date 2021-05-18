@@ -1,9 +1,10 @@
 .example {
-  padding: 20px 0 30px 0;
+  padding: 27px 0 34px 0;
   background-color: $bg-example;
 
   @media (min-width: $tablet-width) {
     background-color: $basic-white;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -26,6 +27,8 @@
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(60px, 60px, $black);
+    padding: 0 30px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: $desktop-width) {
@@ -41,25 +44,29 @@
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(16px, 24px);
+    padding: 0 30px;
+    width: 96%;
+    margin-bottom: 52px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 60px;
+    margin-bottom: 68px;
   }
 }
 
 .example__results-wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 25px auto;
+  margin: 0 auto 19px auto;
+  padding: 0 10px;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
+    width: 424px;
     margin: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 55px;
+    margin-bottom: 44px;
     min-width: 80%;
   }
 }
@@ -68,18 +75,24 @@
   @include fonts($fontOswaldRegular, 400, normal, 14px, 20px, $black);
   text-transform: uppercase;
   text-align: center;
-  margin: 0 0 42px 0;
+  margin: 0;
   padding: 0;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(20px, 20px, $black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 25%;
     text-align: right;
+    padding: 12px 0 16px 0;
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
     text-align: left;
+    display: block;
+    padding-left: 29px;
   }
 }
 
@@ -92,9 +105,9 @@
 .example__results {
   @include fonts($fontArial, 400, normal, 12px, 12px, $simple-text);
   text-align: center;
-  max-width: 55%;
+  max-width: 60%;
   margin: 0 auto 0 auto;
-  padding: 10px 0 0 0;
+  padding: 14px 0 0 0;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(14px, 14px);
@@ -104,13 +117,13 @@
 }
 
 .example__results-title {
+  @include fonts($fontOswaldRegular, 400, normal, 24px, 24px, $black);
+  display: block;
+  margin-bottom: 10px;
+
   @media (min-width: $tablet-width) {
     @include fontSizeColor(30px, 37px, $black);
   }
-
-  @include fonts($fontOswaldRegular, 400, normal, 24px, 24px, $black);
-  display: block;
-  margin-bottom: 12px;
 }
 
 .example__border-wrapper {
@@ -120,7 +133,6 @@
   @media (min-width: $tablet-width) {
     background-size: 162px, 77px;
     width: 300px;
-    margin-right: 10px;
   }
 }
 
@@ -128,10 +140,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding-right: 30px;
   }
 
   @media (min-width: $desktop-width) {
     display: block;
+    padding: 0;
   }
 }
 
@@ -139,6 +153,11 @@
   display: inline-block;
   vertical-align: baseline;
   width: 90%;
+  padding-right: 2px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
 }
 
 .example__wrapper {
@@ -150,12 +169,14 @@
 }
 
 .example__desktop-column-wrapper {
+  margin: 0 0 32px 0;
+
   @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    margin-bottom: 260px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 50px  0 0 30px;
-    width: 45%;
+    padding: 72px  0 0 21px;
+    width: 41%;
   }
 }

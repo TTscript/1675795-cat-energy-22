@@ -1,5 +1,6 @@
 .page-footer {
   margin: auto 0 0 0;
+  padding-bottom: 25px;
   background-color: $btn-color;
 }
 
@@ -11,12 +12,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 150px;
+    height: 148px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1320px;
     padding: 0 50px;
     margin: 0 auto;
+    height: 155px;
   }
 }

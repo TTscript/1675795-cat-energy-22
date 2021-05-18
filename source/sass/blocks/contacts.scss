@@ -1,8 +1,11 @@
 .contacts {
   background-color: $basic-white;
-  text-align: left;
   padding: 28px 0 0 0;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+  }
 
   @media (min-width: $desktop-width) {
     position: relative;
@@ -11,53 +14,74 @@
 }
 
 .contacts__center-wrapper {
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+
   @media (min-width: $desktop-width) {
     position: relative;
     max-width: 1320px;
     padding: 0 50px;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
   }
 }
 
 .contacts__wrapper {
   padding: 0 20px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 0 28px 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     padding: 0 70px;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 100px;
+    top: 122px;
     left: 50px;
     background-color: $basic-white;
     width: 570px;
     height: 201px;
-    padding: 0 70px;
+    padding: 69px 70px 0 76px;
   }
 }
 
 .contacts__invite {
-  @include fonts($fontOswaldRegular, 400, normal, 16px, 18px, $contacts-color);
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 20px, $contacts-color);
   text-transform: uppercase;
-  width: 100%;
-  margin: 0 10px 0 0;
+  width: 50%;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
-    @include fontSizeColor(20px, 21px, $contacts-color);
+    @include fontSizeColor(20px, 23px, $contacts-color);
+    width: 30%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
   }
 }
 
 .contacts__address {
+  line-height: 20px;
   margin: 0;
   padding: 0;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(16px, 20px, $simple-text);
+    text-align: right;
+    margin: -5px 2px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin: -5px 2px 0 0;
+    width: 172px;
   }
 }
 
@@ -75,4 +99,24 @@
   display: flex;
   background-color: $simple-text;
   min-width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 427px;
+  }
+}
+
+.contacts__adress-text {
+  margin-top: 30px;
+}
+
+.contacts__adress-tablet--break {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

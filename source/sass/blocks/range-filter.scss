@@ -1,12 +1,7 @@
 .range-filter {
   @media (min-width: $tablet-width) {
-    background-color: $bg-example;
-    min-height: 462px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    padding-bottom: 40px;
+    background: linear-gradient(to bottom, transparent 35%, $bg-example 35%);
+    padding-bottom: 68px;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,15 +16,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .range-filter__wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 59px 0 64px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 100px 0 98px;
+  }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 40px;
+    padding: 0 59px 0 64px;
+    transform: translate(93px, 25px);
   }
 }
 
@@ -38,15 +44,20 @@
   height: 14px;
   border: 1px solid $scale-color;
   border-radius: 6px;
-  margin: 0 5px 0 0;
+  margin: 0 0 0 0;
   position: relative;
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
     background-color: transparent;
     border: 0;
-    width: 428px;
+    width: 435px;
     position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 20px;
+    width: 474px;
   }
 }
 
@@ -56,8 +67,8 @@
   background-color: $basic-green;
   border-radius: 6px;
   position: absolute;
-  top: 3px;
-  left: 4px;
+  top: 2px;
+  left: 5px;
 
   @media (min-width: $tablet-width) {
     width: 428px;
@@ -75,8 +86,13 @@
   padding: 0;
   margin: 0;
 
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 20px, $black);
+    padding-bottom: 4px;
+  }
+
   &:first-of-type {
-    margin: 0 5px 0 0;
+    margin: 0 0 0 0;
   }
 
   &:hover,
@@ -90,23 +106,23 @@
 }
 
 .range-filter__cat {
-  height: 232px;
+  height: 242px;
+  width: 315px;
+  margin-right: auto;
 
   @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    position: absolute;
-    top: -200px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 709px;
-    height: 620px;
+    height: 598px;
+    width: 672px;
+    margin: 0 auto;
+    padding-top: 78px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: -550px;
-    left: 0;
-    width: 100%;
-    height: 500px;
+    top: -515px;
+    left: 81px;
+    width: 93%;
+    height: 522px;
   }
 }
 
@@ -117,8 +133,8 @@
 .range-filter__toggle {
   @media (min-width: $tablet-width) {
     position: relative;
-    top: -11px;
-    left: 214px;
+    top: -13px;
+    left: 203px;
     width: 34px;
     height: 34px;
     background-color: $basic-white;
