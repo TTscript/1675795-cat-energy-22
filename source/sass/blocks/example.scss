@@ -1,3 +1,7 @@
+.example {
+  background: linear-gradient(to bottom, transparent 24%, $bg-example 24%);
+}
+
 .example__wrapper {
   padding: 27px 20px 34px 20px;
   background-color: $bg-example;
@@ -10,7 +14,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     max-width: 1320px;
-    background: linear-gradient(to bottom, transparent 25%, $bg-example 25%);
+    background: none;
     padding: 0 50px;
     margin: 0 auto;
   }
@@ -186,11 +190,7 @@
 .example__border-wrapper:last-of-type .example__results-subtitle {
   @media (min-width: $tablet-width) {
     width: 90%;
-    background-color: $basic-white;
-    padding: 0 5px;
-  }
-
-  @media (min-width: $desktop-width) {
     background-color: $bg-example;
+    padding: 0 5px;
   }
 }

@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -144,6 +144,7 @@
   display: none;
   transform: translateX(26px);
 
+
   @media (min-width: $tablet-width) {
     margin-bottom: 19px;
   }
@@ -168,9 +169,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 662px;
-    height: 617px;
-    transform: translate(23px, -36px);
+    width: 684px;
+    height: 660px;
+    transform: translate(-9px, -22px);
   }
 }
 
