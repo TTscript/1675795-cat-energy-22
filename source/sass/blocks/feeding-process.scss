@@ -1,16 +1,16 @@
 .feeding-process {
   text-align: left;
   padding: 0 20px 0 20px;
-  margin: 0 0 36px 0;
+  margin: 0 0 46px 0;
 
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $header-menu-line;
     margin-bottom: 16px;
-    padding: 0 0 102px 0;
+    padding: 0 0 101px 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
     border-bottom: 0;
   }
 }
@@ -46,7 +46,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 123px;
+    row-gap: 121px;
     column-gap: 58px;
     counter-reset: list;
   }
@@ -58,6 +58,31 @@
 }
 
 .feeding-process__list .feeding-process__item {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 26px 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      display: block;
+      margin-bottom: 44px;
+      position: relative;
+      top: 10px;
+    }
+
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 16px 0 0;
+    padding: 0;
+  }
+
   @media (min-width: $tablet-width) {
     position: relative;
     width: 79%;
@@ -84,31 +109,6 @@
       }
     }
   }
-
-  position: relative;
-  z-index: 1;
-  margin: 0 0 16px 0;
-  padding: 0;
-  display: inline-block;
-  vertical-align: middle;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
-  &::before {
-    @media (min-width: $tablet-width) {
-      display: block;
-      margin-bottom: 42px;
-      position: relative;
-      top: 10px;
-    }
-
-    display: inline-block;
-    vertical-align: baseline;
-    margin: 0 16px 0 0;
-    padding: 0;
-  }
 }
 
 .feeding-process__item--sheet {
@@ -120,7 +120,7 @@
     width: 60px;
     height: 60px;
     background-size: 30px 32px, 60px 60px;
-    position: relative;
+    position: absolute;
     top: -2px;
 
     @media (min-width: $tablet-width) {
@@ -140,7 +140,7 @@
     width: 60px;
     height: 60px;
     background-size: 29px 31px, 60px 60px;
-    position: relative;
+    position: absolute;
     top: -2px;
 
     @media (min-width: $tablet-width) {
@@ -160,7 +160,7 @@
     width: 60px;
     height: 60px;
     background-size: 25px 30px, 60px 60px;
-    position: relative;
+    position: absolute;
     top: -2px;
 
     @media (min-width: $tablet-width) {
@@ -184,7 +184,7 @@
     width: 60px;
     height: 60px;
     background-size: 32px 33px, 60px 60px;
-    position: relative;
+    position: absolute;
     top: -2px;
 
     @media (min-width: $tablet-width) {
@@ -196,19 +196,20 @@
 }
 
 .feeding-process__item-description {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0 0 80px;
+  vertical-align: top;
+
   @media (min-width: $tablet-width) {
     @include fontSizeColor(16px, 24px);
     width: 100%;
+    padding: 0;
 
     &:last-of-type {
       width: 100%;
     }
   }
-  width: 70%;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  vertical-align: top;
 }
 
 .feeding-process__break {

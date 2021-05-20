@@ -1,14 +1,13 @@
 .range-filter {
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, transparent 35%, $bg-example 35%);
     padding-bottom: 68px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 30px;
     position: relative;
     min-height: auto;
     margin-top: auto;
+    padding: 0 30px 53px 0;
   }
 }
 
@@ -16,10 +15,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin: 0;
   }
 }
 
@@ -27,14 +26,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 59px 0 64px;
+  padding: 0 39px 0 44px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 100px 0 98px;
+    padding: 0 70px 0 68px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 59px 0 64px;
+    padding: 0 44px 0 56px;
     transform: translate(93px, 25px);
   }
 }
@@ -107,14 +106,16 @@
 
 .range-filter__cat {
   height: 242px;
-  width: 315px;
-  margin-right: auto;
+  min-width: 318px;
+  transform: translateX(-3px);
+  margin: 0 auto;
 
   @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     height: 598px;
     width: 672px;
     margin: 0 auto;
     padding-top: 78px;
+    transform: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -126,7 +127,58 @@
   }
 }
 
+.range-filter__fat-cat {
+  @media (min-width: $tablet-width) {
+    display: none;
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -535px;
+    left: 76px;
+    width: 95%;
+  }
+}
+
 .range-filter__thin-cat {
+  display: none;
+  transform: translateX(26px);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 547px;
+    height: 522px;
+    transform: translate(79px, -21px);
+  }
+}
+
+.range-filter__two-cats {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 662px;
+    height: 617px;
+    padding: 0;
+    transform: translate(26px, 66px);
+    pointer-events: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 662px;
+    height: 617px;
+    transform: translate(23px, -36px);
+  }
+}
+
+.range-filter__appear-cat {
+  display: block;
+}
+
+.range-filter__disappear-cat {
   display: none;
 }
 
@@ -163,12 +215,4 @@
     background-color: $basic-green;
     border-radius: 50%;
   }
-}
-
-.range-filter__appear-cat {
-  display: block;
-}
-
-.range-filter__disappear-cat {
-  display: none;
 }
