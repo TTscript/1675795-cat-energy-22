@@ -59,7 +59,7 @@
         <section class="product-info">
           <div class="product-info__wrapper">
             <div class="product-info__inner">
-              <h1 class="product-info__title">Функциональное питание для котов </h1>
+              <h1 class="product-info__title">Функциональное питание для котов</h1>
               <p class="product-info__slogan">Занялся собой? Займись котом!</p>
               <p><a class="product-info__button-tablet product-info__button-desktop button" href="form.html">подобрать программу</a></p>
             </div>
@@ -133,7 +133,7 @@
                     <p class="example__results"><span class="example__results-title">60 ДНЕЙ</span><span class="example__results-subtitle">затрачено времени</span></p>
                   </div>
                 </div>
-                <p class="example__costs"><span class="example__costs-text">Затраты на питание:</span> 15 000 РУБ.</p>
+                <p class="example__costs"><span class="example__costs-text">Затраты на питание:</span>15 000 РУБ.</p>
               </div>
             </div>
 
@@ -171,12 +171,14 @@
             <div class="contacts__wrapper">
               <p class="contacts__invite">приглашаем <br> к сотрудничеству дилеров!
               <p class="contacts__address">
-                ул. Большая  <br> Конюшенная, д. 19/8 <span class="contacts__adress-index-space"> Санкт-Петербург </span>
+                ул. Большая  <br> Конюшенная, д. 19/8 <br> <span class="contacts__adress-index-space"> Санкт-Петербург </span>
               </p>
             </div>
           </div>
-          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002983!2d30.32085871593242!3d59.93871916905438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1617970093934!5m2!1sru!2skz"
-          width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          <div class="contacts__map">
+            <iframe class="contacts__map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002983!2d30.32085871593242!3d59.93871916905438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1617970093934!5m2!1sru!2skz"
+            width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </div>
         <div class="page-footer__inner">
           <div class="footer-logo">
@@ -214,7 +216,6 @@
       let transition = document.querySelector('.site-list__transition');
 
       burgerButton.addEventListener('click', function () {
-
 
         burgerMenu.classList.toggle('site-list__transition');
 

@@ -1,7 +1,7 @@
 .feeding-process {
   text-align: left;
   padding: 0 20px 0 20px;
-  margin: 0 0 46px 0;
+  margin: 0 0 40px 0;
 
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $header-menu-line;
@@ -28,14 +28,18 @@
 }
 
 .feeding-process__title {
+  @include fonts($fontOswaldRegular, 400, normal, 36px, 40px, $black);
+  margin: 0 0 39px 0;
+  padding: 0;
+
   @media (min-width: $tablet-width) {
     @include fontSizeColor(60px, 60px, $black);
     margin-bottom: 62px;
   }
 
-  @include fonts($fontOswaldRegular, 400, normal, 36px, 40px, $black);
-  margin: 0 0 39px 0;
-  padding: 0;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 61px;
+  }
 }
 
 .feeding-process__list {
@@ -60,27 +64,28 @@
 .feeding-process__list .feeding-process__item {
   position: relative;
   z-index: 1;
-  margin: 0 0 26px 0;
+  margin: 0 0 20px 0;
   padding: 0;
   display: inline-block;
   vertical-align: middle;
+  min-height: 60px;
 
   &:last-of-type {
     margin-bottom: 0;
   }
 
   &::before {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 16px 0 0;
+    padding: 0;
+
     @media (min-width: $tablet-width) {
       display: block;
       margin-bottom: 44px;
       position: relative;
       top: 10px;
     }
-
-    display: inline-block;
-    vertical-align: baseline;
-    margin: 0 16px 0 0;
-    padding: 0;
   }
 
   @media (min-width: $tablet-width) {

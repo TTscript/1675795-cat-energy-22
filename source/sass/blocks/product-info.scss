@@ -1,13 +1,12 @@
 .product-info {
   @media (max-width: $mobile-only) {
     padding: 0;
-    margin: 0 0 22px 0;
+    margin: 0 0 21px 0;
   }
 
   @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     overflow: hidden;
     text-align: left;
-    padding-left: 117px;
     margin-bottom: 0;
   }
 
@@ -35,28 +34,9 @@
 }
 
 .product-info__wrapper {
-  position: relative;
   text-align: center;
-  z-index: 1;
-  padding: 28px 20px 0 20px;
-
-  &::after {
-    @media (max-width: $mobile-only) {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: linear-gradient(to right, $green-opacity, $green-opacity), url("../img/cat-background.png") 64% 0 no-repeat;
-      width: 100%;
-      height: 302px;
-      z-index: -1;
-      background-size: cover;
-
-      @media (min-resolution: 2dppx) {
-        background: linear-gradient(to right, $green-opacity, $green-opacity), url("../img/cat-background@2x.png") 64% 0 no-repeat;
-      }
-    }
-  }
+  padding: 0;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     background: none;
@@ -75,12 +55,25 @@
 }
 
 .product-info__inner {
-  margin-bottom: 28px;
+  @media (max-width: $mobile-only) {
+    background: linear-gradient(to right, $green-opacity, $green-opacity), url("../img/cat-background.png") 64% 0 no-repeat;
+    width: 100%;
+    min-height: 302px;
+    background-size: cover;
+    margin-bottom: 28px;
+    padding: 28px 20px 149px 20px;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(to right, $green-opacity, $green-opacity), url("../img/cat-background@2x.png") 64% 0 no-repeat;
+      background-size: 178% 100%, cover;
+    }
+  }
 
   @media (min-width: $tablet-width) {
-    opacity: 1;
+    width: 100%;
+    background-size: cover;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 117px;
     min-height: 0;
   }
 
@@ -124,14 +117,19 @@
 }
 
 .product-info__picture {
-  min-width: 280px;
+  @media (max-width: $mobile-only) {
+    display: block;
+    min-width: 280px;
+    margin: -163px auto 5px auto;
+  }
 
   @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    min-width: 664px;
-    height: 612px;
+    min-width: 677px;
+    height: 610px;
     position: relative;
-    top: 5px;
-    left: -47px;
+    top: 7px;
+    left: 63px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -139,8 +137,9 @@
     width: 552px;
     height: 499px;
     position: relative;
-    top: 19px;
-    left: -3px;
+    top: 17px;
+    left: -4px;
+    z-index: 1;
   }
 }
 
@@ -148,8 +147,8 @@
   @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     @include fontSizeColor(20px, 20px, $basic-white);
     position: absolute;
-    top: 230px;
-    left: -5px;
+    top: 370px;
+    left: 112px;
     min-width: 244px;
     height: 54px;
     z-index: 1;
