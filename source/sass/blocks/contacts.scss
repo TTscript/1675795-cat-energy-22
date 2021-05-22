@@ -94,7 +94,7 @@
   padding: 28px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 69px 70px;
+    padding: 69px 70px 58px 71px;
   }
 
   @media (min-width: $desktop-width) {
@@ -151,6 +151,8 @@
 }
 
 .contacts__center-wrapper.contacts__center-wrapper--form-space {
+  margin-bottom: 0;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }

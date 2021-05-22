@@ -52,7 +52,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      left: -10px;
+      left: -70px;
+      width: 1440px;
     }
   }
 
@@ -77,9 +78,9 @@
 }
 
 .addition__label {
-  padding: 6px;
+  padding: 6px 6px 6px 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 9px 9px 9px 9px;
+    padding: 11px 9px 11px 39px;
   }
 }
