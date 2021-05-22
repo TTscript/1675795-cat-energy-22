@@ -1,5 +1,5 @@
 .check-box {
-  margin: 0 0 20px 0;
+  margin: 0 0 22px 0;
   padding: 0;
 
   &:last-of-type {
@@ -12,25 +12,26 @@
   text-transform: uppercase;
   position: relative;
   top: 0;
-  left: 40px;
+  left: 16px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(20px, 30px);
-    left: 50px;
+    left: 20px;
   }
 
   &::before {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -40px;
+    top: 4px;
+    left: -16px;
     width: 30px;
     height: 30px;
     border: 1px solid $scale-color;
 
     @media (min-width: $tablet-width) {
-      left: -50px;
+      top: 6px;
+      left: -20px;
       width: 40px;
       height: 40px;
     }
@@ -53,14 +54,15 @@
     & + .check-box__label::before {
       content: "";
       position: absolute;
-      top: -2px;
-      left: -40px;
+      top: 4px;
+      left: -16px;
       width: 30px;
       height: 30px;
       border: 1px solid $check-box-hover;
 
       @media (min-width: $tablet-width) {
-        left: -50px;
+        top: 6px;
+        left: -20px;
         width: 40px;
         height: 40px;
       }
@@ -71,12 +73,12 @@
     & + .check-box__label::after {
       content: url("../img/decor.elements/checkbox-checked.svg");
       position: absolute;
-      top: 4px;
-      left: -35px;
+      top: 11px;
+      left: -9px;
 
       @media (min-width: $tablet-width) {
-        top: 2px;
-        left: -38px;
+        top: 10px;
+        left: -9px;
       }
     }
   }
@@ -85,14 +87,15 @@
     & + .check-box__label::before {
       content: "";
       position: absolute;
-      top: -2px;
-      left: -40px;
+      top: 4px;
+      left: -16px;
       width: 30px;
       height: 30px;
       border: 1px solid $check-box-disabled;
 
       @media (min-width: $tablet-width) {
-        left: -50px;
+        top: 6px;
+        left: -20px;
         width: 40px;
         height: 40px;
       }
@@ -103,13 +106,13 @@
     & + .addition__label::after {
       content: url("../img/decor.elements/checkbox-checked.svg");
       position: absolute;
-      top: 4px;
-      left: -35px;
+      top: 11px;
+      left: -9px;
       opacity: 0.3;
 
       @media (min-width: $tablet-width) {
-        top: 2px;
-        left: -38px;
+        top: 10px;
+        left: -9px;
       }
     }
   }
