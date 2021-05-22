@@ -1,6 +1,16 @@
 .selections-programm {
   padding: 0 20px;
-  margin: 0 0 27px 0;
+  margin: 0 0 26px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 74px;
+    padding: 0;
+  }
 }
 
 .selections-programm__list {
@@ -28,6 +38,16 @@
   background-color: $btn-color;
   margin: 0 0 20px 0;
   padding: 0 20px 20px 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+  }
 }
 
 .selections-programm__item-title {
@@ -35,131 +55,195 @@
   text-transform: uppercase;
   display: inline-block;
   vertical-align: top;
-  padding: 30px 0 0 0;
-  margin: 0 0 25px 0;
+  padding: 0 0 0 71px;
+  margin: 0 0 29px 0;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(36px, 36px, $black);
+    margin-bottom: 26px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     text-align: center;
+    padding: 37px 0 0 163px;
+    margin-bottom: 73px;
+  }
+}
+
+.selections-programm__item--cat-walk-img .selections-programm__item-title {
+  @media (min-width: $desktop-width) {
+    padding: 29px 0 0 181px;
+    margin-bottom: 75px;
   }
 }
 
 .selections-programm__item-description {
-  width: 85%;
   text-align: left;
-  padding: 0 0 20px 0;
-  margin: 0;
+  padding: 0;
+  margin: 0 0 22px 0;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(16px, 24px, $black);
     width: 60%;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 90%;
+    width: 95%;
   }
 }
 
 .selections-programm__item--cat-sit-img {
   position: relative;
+  margin-bottom: 18px;
+  padding-top: 30px;
 
   &::before {
     content: "";
     background: url("../img/decor.elements/cat-sit.svg") no-repeat;
-    transform: translateY(40%);
+    // transform: translate(5%, 40%);
     width: 50px;
     height: 53px;
-    display: inline-block;
-    vertical-align: baseline;
+    position: absolute;
+    top: 21px;
+    left: 22px;
 
-    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
       position: absolute;
-      top: -30%;
-      left: 65%;
-      width: 200px;
+      top: 80px;
+      left: 448px;
+      width: 197px;
       height: 211px;
       background-size: contain;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
     }
 
     @media (min-width: $desktop-width) {
-      transform: translateY(0);
       width: 100px;
       height: 106px;
-      margin-right: 50px;
+      margin: 0;
       background-size: contain;
+      top: 40px;
+      left: 52px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 20px 56px 52px;
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding: 41px 15px 56px 52px;
   }
 }
 
 .selections-programm__item--cat-walk-img {
   position: relative;
+  padding-top: 32px;
 
   &::before {
     content: "";
     background: url("../img/decor.elements/cat-walk.svg") no-repeat;
-    transform: translateY(40%);
+    // transform: translate(-10%, 46%);
     width: 67px;
     height: 50px;
-    display: inline-block;
-    vertical-align: baseline;
-    position: relative;
+    position: absolute;
+    top: 24px;
+    left: 13px;
 
-    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
       position: absolute;
-      top: -25%;
-      left: 60%;
+      top: 94px;
+      left: 411px;
       width: 268px;
       height: 200px;
       background-size: contain;
-      padding: 20px;
     }
 
     @media (min-width: $desktop-width) {
-      transform: translateY(0);
       width: 134px;
       height: 100px;
-      margin-right: 50px;
+      margin: 0;
       background-size: contain;
-      margin-top: 10px;
+      top: 46px;
+      left: 33px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 79px 20px 56px 53px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 47px 20px 56px 33px;
   }
 }
 
 .selections-programm__item--cat-walk-img .selections-programm__item-description {
   @media (min-width: $tablet-width) {
-    width: 55%;
+    width: 54%;
   }
 
   @media (min-width: $desktop-width) {
     width: 90%;
+    padding-left: 19px;
+  }
+}
+
+.selections-programm__item--cat-walk-img .selections-programm__border-bottom-wrapper {
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
+}
+
+.selections-programm__item--cat-walk-img .selections-programm__item-link {
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 19px;
   }
 }
 
 .selections-programm__border-bottom-wrapper {
   @media (min-width: $tablet-width) {
     border: 0;
+    margin-bottom: 51px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 26px;
+  }
+
   border-bottom: 1px solid $line-color;
-  margin: 0 0 23px 0;
+  margin: 0 0 19px 0;
 }
 
 .selections-programm__item-link {
-  @media (min-width: $tablet-width) {
-    @include fontSizeColor(20px, 30px, $black);
-  }
-
   @include fonts($fontOswaldRegular, 400, normal, 16px, 16px, $black);
   text-transform: uppercase;
   text-align: left;
-  padding: 0 0 20px 0;
+  padding: 0;
 
   &::after {
     content: url("../img/decor.elements/icon-arrow.svg");
-    padding: 0 0 0 17px;
+    padding: 0 0 0 16px;
+    position: relative;
+    top: -2px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 28px;
+    }
   }
 
   &:hover {
@@ -170,5 +254,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 30px, $black);
+    padding: 0;
   }
 }

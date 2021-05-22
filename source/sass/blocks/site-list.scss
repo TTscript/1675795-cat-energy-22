@@ -2,34 +2,34 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 200px;
+  max-height: 0;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-around;
-    gap: 33px;
+    gap: 35px;
     margin-left: auto;
     max-height: 100%;
     transition: none;
   }
 
   @media (min-width: $desktop-width) {
+    width: 50%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    column-gap: 34px;
     z-index: 3;
     margin: 0;
-    padding: 0;
+    padding: 0 0 12px 0;
   }
 }
 
 .site-list__item {
   margin: 0;
-  padding: 22px 0;
+  padding: 22px 0 20px 0;
   border-bottom: 1px solid $header-menu-line;
   cursor: pointer;
-
-  @media (min-width: $tablet-width) {
-    border: 0;
-  }
 
   &:last-of-type {
     margin: 0;
@@ -42,24 +42,38 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    border: 0;
+    padding-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .site-list__item-title--current-item {
   border-bottom: 2px solid $basic-green;
+  padding-bottom: 8px;
 }
 
 .site-list__item-title {
   @include fonts($fontOswaldMedium, 500, normal, 20px, 20px, $black);
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include fonts($fontOswaldRegular, 400, normal, 18px, 24px, $black);
+  }
 }
 
-.site-list__index-desktop--color {
+.site-list__index-desktop-color {
   @media (min-width: $desktop-width) {
     @include fonts($fontOswaldRegular, 400, normal, 20px, 30px, $basic-white);
   }
 }
 
-.site-list__index-desktop--border-color {
+.site-list__index-desktop-border-color {
   @media (min-width: $desktop-width) {
     border-bottom: 2px solid $basic-white;
   }

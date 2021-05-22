@@ -1,57 +1,47 @@
 .product-info {
   @media (max-width: $mobile-only) {
     padding: 0;
-    margin: 0 0 22px 0;
+    margin: 0 0 21px 0;
   }
 
   @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    overflow: hidden;
     text-align: left;
-    padding-left: 87px;
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     position: relative;
-    height: 696px;
-    margin: -160px 0 82px 0;
-    padding-top: 100px;
+    margin: 0 0 149px 0;
+    padding-top: 0;
 
     &::after {
       content: "";
       position: absolute;
-      top: 0;
+      top: -124px;
       left: 50%;
       width: 50%;
-      height: 100%;
+      height: 693px;
       background: linear-gradient(to right, $green-opacity, $green-opacity), url("../img/index-background-desktop.jpg") no-repeat;
       background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: linear-gradient(to right, $green-opacity, $green-opacity), url("../img/index-background-desktop@2x.png") no-repeat;
+        background-size: 143% 107%;
+      }
     }
   }
 }
 
 .product-info__wrapper {
-  position: relative;
-  background: url("../img/cat-background.jpg") 50%  0 no-repeat;
   text-align: center;
-  z-index: 1;
-
-  &::after {
-    @media (max-width: $mobile-only) {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: $basic-green;
-      width: 100%;
-      height: 302px;
-      opacity: 0.85;
-      z-index: -1;
-    }
-  }
+  padding: 0;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     background: none;
     text-align: left;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -65,38 +55,48 @@
 }
 
 .product-info__inner {
-  @media (max-width: $desktop-width) {
+  @media (max-width: $mobile-only) {
+    background: linear-gradient(to right, $green-opacity, $green-opacity), url("../img/cat-background.png") 64% 0 no-repeat;
+    width: 100%;
     min-height: 302px;
-    margin: 0 0 -120px 0;
-    padding: 30px 0 0 0;
+    background-size: cover;
+    margin-bottom: 28px;
+    padding: 28px 20px 149px 20px;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(to right, $green-opacity, $green-opacity), url("../img/cat-background@2x.png") 64% 0 no-repeat;
+      background-size: 178% 100%, cover;
+    }
   }
 
   @media (min-width: $tablet-width) {
-    opacity: 1;
+    width: 100%;
+    background-size: cover;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 117px;
     min-height: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 37%;
     padding-top: 100px;
+    padding-left: 80px;
   }
 }
 
 .product-info__title {
   @include fonts($fontOswaldRegular, 400, normal, 36px, 36px, $basic-white);
-
   margin: 0 0 25px 0;
   padding: 0;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(60px, 60px, $black);
     width: 70%;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    width: 115%;
     margin-bottom: 40px;
   }
 }
@@ -117,26 +117,40 @@
 }
 
 .product-info__picture {
-  min-width: 280px;
+  @media (max-width: $mobile-only) {
+    display: block;
+    min-width: 280px;
+    margin: -163px auto 5px auto;
+  }
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
-    min-width: 709px;
-    width: 709px;
-    height: 609px;
+  @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    min-width: 677px;
+    height: 610px;
+    position: relative;
+    top: 7px;
+    left: 63px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     background-size: contain;
     width: 552px;
     height: 499px;
+    position: relative;
+    top: 17px;
+    left: -4px;
+    z-index: 1;
   }
 }
 
 .product-info__button-tablet.button {
   @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    @include fontSizeColor(20px, 20px, $basic-white);
     position: absolute;
-    top: 200px;
-    left: 87px;
+    top: 370px;
+    left: 112px;
+    min-width: 244px;
+    height: 54px;
     z-index: 1;
   }
 
@@ -152,7 +166,7 @@
     display: inline-flex;
     font-size: 20px;
     line-height: 20px;
-    max-width: 244px;
+    min-width: 244px;
     height: 54px;
   }
 }

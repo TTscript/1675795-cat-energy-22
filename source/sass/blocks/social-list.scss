@@ -2,18 +2,23 @@
   list-style: none;
   display: inline-flex;
   vertical-align: middle;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 50%;
-  padding: 25px 0 25px 0;
+  column-gap: 34px;
+  row-gap: 10px;
+  width: 64%;
+  padding: 21px 9px 19px 6px;
   margin: 0;
   position: relative;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     justify-content: space-between;
     align-items: center;
-    min-width: 129px;
+    width: 100%;
+    column-gap: 19px;
+    row-gap: 0;
   }
 }
 
@@ -30,8 +35,9 @@
       background: url("../img/icon-vkontakte.svg") no-repeat;
       background-size: contain;
       width: 30px;
-      height: 22px;
+      height: 24px;
       display: block;
+      margin: 0 7px 0 -5px;
     }
   }
 
@@ -91,8 +97,8 @@
       content: "";
       background: url("../img/icon-facebook.svg") no-repeat;
       background-size: contain;
-      width: 33px;
-      height: 28px;
+      width: 35px;
+      height: 32px;
       display: block;
     }
   }

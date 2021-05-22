@@ -1,19 +1,13 @@
 .range-filter {
   @media (min-width: $tablet-width) {
-    background-color: $bg-example;
-    min-height: 462px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 68px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 30px;
     position: relative;
     min-height: auto;
     margin-top: auto;
+    padding: 0 30px 34px 0;
   }
 }
 
@@ -21,15 +15,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .range-filter__wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 39px 0 44px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 70px 0 68px;
+  }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 40px;
+    padding: 0 44px 0 56px;
+    transform: translate(93px, 25px);
   }
 }
 
@@ -38,15 +43,20 @@
   height: 14px;
   border: 1px solid $scale-color;
   border-radius: 6px;
-  margin: 0 5px 0 0;
+  margin: 0 0 0 0;
   position: relative;
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
     background-color: transparent;
     border: 0;
-    width: 428px;
+    width: 435px;
     position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 20px;
+    width: 474px;
   }
 }
 
@@ -56,8 +66,8 @@
   background-color: $basic-green;
   border-radius: 6px;
   position: absolute;
-  top: 3px;
-  left: 4px;
+  top: 2px;
+  left: 5px;
 
   @media (min-width: $tablet-width) {
     width: 428px;
@@ -75,8 +85,13 @@
   padding: 0;
   margin: 0;
 
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(20px, 20px, $black);
+    padding-bottom: 4px;
+  }
+
   &:first-of-type {
-    margin: 0 5px 0 0;
+    margin: 0 0 0 0;
   }
 
   &:hover,
@@ -90,35 +105,101 @@
 }
 
 .range-filter__cat {
-  height: 232px;
+  height: 242px;
+  min-width: 318px;
+  transform: translateX(-3px);
+  margin: 0 auto;
 
   @media screen and (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    position: absolute;
-    top: -200px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 709px;
-    height: 620px;
+    height: 598px;
+    width: 672px;
+    margin: 0 auto;
+    padding-top: 78px;
+    transform: none;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: -550px;
-    left: 0;
-    width: 100%;
-    height: 500px;
+    top: -515px;
+    left: 81px;
+    width: 93%;
+    height: 522px;
+  }
+}
+
+.range-filter__fat-cat {
+  @media (max-width: $mobile-only) {
+    height: 233px;
+    min-width: 315px;
+    transform: translateX(-5px);
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -535px;
+    left: 76px;
+    width: 95%;
   }
 }
 
 .range-filter__thin-cat {
+  display: none;
+  transform: translateX(26px);
+
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 547px;
+    height: 522px;
+    transform: translate(79px, -21px);
+  }
+}
+
+.range-filter__two-cats {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 642px;
+    height: 617px;
+    transform: translate(26px, 57px);
+    pointer-events: none;
+    padding: 0;
+    margin-top: -12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 684px;
+    height: 660px;
+    transform: translate(-9px, -22px);
+    pointer-events: none;
+    padding: 0;
+    margin-top: -12px;
+  }
+}
+
+.range-filter__appear-cat {
+  display: block;
+}
+
+.range-filter__disappear-cat {
   display: none;
 }
 
 .range-filter__toggle {
   @media (min-width: $tablet-width) {
     position: relative;
-    top: -11px;
-    left: 214px;
+    top: -13px;
+    left: 203px;
     width: 34px;
     height: 34px;
     background-color: $basic-white;
@@ -147,12 +228,4 @@
     background-color: $basic-green;
     border-radius: 50%;
   }
-}
-
-.range-filter__appear-cat {
-  display: block;
-}
-
-.range-filter__disappear-cat {
-  display: none;
 }

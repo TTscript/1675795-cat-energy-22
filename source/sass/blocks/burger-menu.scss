@@ -5,6 +5,8 @@
   cursor: pointer;
   border: 0;
   outline: none;
+  position: relative;
+  top: 7px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -27,17 +29,17 @@
 }
 
 .burger-menu__line--second-rotate {
-  top: 10px;
+  top: 8px;
   height: 1px;
 }
 
 .burger-menu__line--third-rotate {
-  top: 9px;
+  top: 7px;
   height: 1px;
 }
 
 .burger-menu__line--fourth-translate {
-  top: 18px;
+  top: 14px;
   height: 1px;
 }
 
@@ -59,4 +61,8 @@
 .burger-menu__line--fourth {
   transform: translateX(-200%);
   transition: 0.5s all;
+}
+
+.burger-menu__display-block {
+  display: block;
 }
