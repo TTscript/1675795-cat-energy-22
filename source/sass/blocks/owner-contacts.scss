@@ -1,21 +1,22 @@
 .owner-contacts {
   border: 0;
   padding: 0 20px;
-  margin: 0 0 30px 0;
+  margin: 0 0 24px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0 70px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1320px;
     padding: 0 50px;
-    margin: 0 auto 70px auto;
+    margin: 0 auto 66px auto;
   }
 }
 
 .owner-contacts__inner {
-  @include fonts($fontOswaldRegular, 400, normal, 14px, 18px);
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 18px);
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -26,20 +27,25 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    column-gap: 37px;
   }
 }
 
 .owner-contacts__title {
   @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
   text-transform: none;
-  margin: 0 0 25px 0;
+  margin: 0 0 35px 0;
   position: relative;
   display: inline-block;
   vertical-align: baseline;
   background: $basic-white;
-  padding: 0 30px;
-  margin-left: -30px;
+  padding: 0 20px 0 20px;
+  margin-left: -20px;
 
+  @media (min-width: $tablet-width) {
+    padding: 0 40px 0 40px;
+    margin-left: -40px;
+  }
 
   &::before {
     content: "";
@@ -55,12 +61,21 @@
 
     @media (max-width: $mobile-only) {
       top: 14px;
-      left: 10px;
+      left: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      left: -30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: -10px;
     }
   }
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(36px, 36px, $black);
+    margin-bottom: 76px;
   }
 }
 
@@ -77,6 +92,10 @@
   margin: 0 0 14px 0;
   padding: 0;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 50%;
     margin: 0 40px 0 0;
@@ -84,6 +103,12 @@
 
   &:last-of-type {
     margin: 0;
+
+    .owner-contacts__item-wrapper .page-main__logic-connection {
+      @media (min-width: $tablet-width) {
+        margin-right: 15px;
+      }
+    }
   }
 }
 
@@ -101,6 +126,19 @@
   position: absolute;
   top: 14px;
   right: 15px;
+
+  @media (min-width: $tablet-width) {
+    top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 20px;
+  }
+}
+
+.owner-contacts__entry-box-img--phone {
+  top: 14px;
+  right: 16px;
 }
 
 .owner-contacts__entry-box {

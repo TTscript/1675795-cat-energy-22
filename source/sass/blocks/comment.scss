@@ -1,32 +1,36 @@
 .comment {
   border: 0;
   padding: 0 20px;
-  margin: 0 0 22px 0;
+  margin: 0 0 20px 0;
   width: 100%;
 
   @media (min-width: $tablet-width) {
     padding: 0 70px;
+    margin-bottom: 61px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1320px;
     padding: 0 50px;
-    margin: 0 auto 70px auto;
+    margin: 0 auto 64px auto;
   }
 }
 
 .comment__title {
   @include fonts($fontOswaldRegular, 400, normal, 24px, 26px, $black);
-  margin: 0 0 35px 0;
+  margin: 0 0 36px 0;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   background-color: $basic-white;
-  padding: 0 30px;
-  margin-left: -30px;
+  padding: 0 20px;
+  margin-left: -20px;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(36px, 36px, $black);
+    margin-bottom: 76px;
+    padding: 0 40px 0 40px;
+    margin-left: -40px;
   }
 
   &::before {
@@ -43,7 +47,15 @@
 
     @media (max-width: $mobile-only) {
       top: 14px;
-      left: 10px;
+      left: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      left: -30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: -10px;
     }
   }
 }
@@ -51,12 +63,15 @@
 .comment__field {
   @include fonts($fontOswaldRegular, 400, normal, 16px, 18px);
   width: 100%;
+  height: 151px;
   border: 1px solid $entry-box-basic;
-  padding: 10px;
+  padding: 10px 10px 10px 14px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(20px, 30px);
+    padding-left: 18px;
+    height: 174px;
   }
 
   &:hover {

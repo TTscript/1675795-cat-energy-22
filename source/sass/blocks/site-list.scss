@@ -94,3 +94,11 @@
 .site-list__transition {
   transition: 1s all;
 }
+
+.site-list.page-header__site-list-form-space {
+  .site-list__item-title {
+    @media (min-width: $desktop-width) {
+      @include fonts($fontOswaldRegular, 400, normal, 20px, 24px, $black);
+    }
+  }
+}

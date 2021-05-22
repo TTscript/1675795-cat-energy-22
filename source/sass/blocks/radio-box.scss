@@ -4,6 +4,10 @@
   align-items: center;
   margin: 0 0 24px 0;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
+
   &:last-of-type {
     margin: 0;
   }
@@ -125,5 +129,13 @@
       width: 18px;
       height: 18px;
     }
+  }
+}
+
+.radio-box__label {
+  padding: 1px 0 0 6px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 10px;
   }
 }

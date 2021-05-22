@@ -1,13 +1,14 @@
 .questionnaire {
-  @include fonts($fontOswaldRegular, 400, normal, 14px, 18px);
+  @include fonts($fontOswaldRegular, 400, normal, 16px, 18px);
   text-transform: uppercase;
   border: 0;
-  margin: 0 0 50px 0;
+  margin: 0 0 23px 0;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(20px, 30px);
     padding: 0;
+    margin-bottom: 72px;
   }
 
   @media (min-width: $desktop-width) {
@@ -20,7 +21,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 0 24px 0;
+  margin: 0 0 14px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 
   &:last-of-type {
     margin: 0;
@@ -29,4 +34,20 @@
 
 .questionnaire__entry-box {
   flex-grow: 1;
+}
+
+.questionnaire__logic-connection {
+  margin-right: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 19px;
+  }
+}
+
+.questionnaire__item:first-of-type .questionnaire__logic-connection {
+  margin-right: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 18px;
+  }
 }

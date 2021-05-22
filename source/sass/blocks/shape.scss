@@ -1,6 +1,14 @@
 .shape {
   margin: 0;
-  padding: 0 0 32px 0;
+  padding: 0 0 3px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .shape__required-text {
@@ -8,6 +16,10 @@
   text-align: center;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    @include fontSizeColor(16px, 20px);
+  }
 }
 
 .shape__button-wrapper {
@@ -29,7 +41,7 @@
 }
 
 .shape__inner {
-  margin: 0 0 30px 0;
+  margin: 0 0 27px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0 70px;
@@ -38,7 +50,8 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 571px;
+    column-gap: 39px;
     max-width: 1320px;
     margin: 0 auto 70px auto;
     padding: 0 50px;
@@ -54,12 +67,12 @@
   @media (min-width: $tablet-width) {
     @include fontSizeColor(20px, 30px, $black);
     padding: 0 70px;
-    margin: 0 0 39px 0;
+    margin: 0 0 66px 0;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1320px;
     padding: 0 50px;
-    margin: 0 auto 39px auto;
+    margin: 0 auto 64px auto;
   }
 }

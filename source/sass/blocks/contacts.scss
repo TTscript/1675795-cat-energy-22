@@ -91,16 +91,21 @@
 .contacts__form-color {
   background-color: $btn-color;
   margin: 0;
-  padding: 40px 20px;
+  padding: 28px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 70px;
+    padding: 69px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 68px 69px 67px 76px;
   }
 }
 
 .contacts__map {
   display: flex;
   background: url("../img/map-mobile.png");
+  background-repeat: no-repeat;
   min-width: 100%;
   height: 362px;
 
@@ -136,5 +141,17 @@
   @media (min-width: $tablet-width) {
     display: block;
     padding-top: 20px;
+  }
+}
+
+.contacts.page-footer__top-space {
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+}
+
+.contacts__center-wrapper.contacts__center-wrapper--form-space {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
   }
 }

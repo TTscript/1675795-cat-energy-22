@@ -17,3 +17,17 @@
 .page-header.page-body__catalog-space {
   margin-bottom: 30px;
 }
+
+.page-header.page-body__form-space {
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    margin-bottom: 75px;
+  }
+}
