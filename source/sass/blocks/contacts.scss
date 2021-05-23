@@ -102,6 +102,23 @@
   }
 }
 
+.contacts__catalog-color {
+  background-color: $btn-color;
+  padding: 28px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 67px 70px 58px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 69px 70px 58px 77px;
+  }
+}
+
+.contacts__catalog-space {
+  margin: 0;
+}
+
 .contacts__map {
   display: flex;
   background: url("../img/map-mobile.png");

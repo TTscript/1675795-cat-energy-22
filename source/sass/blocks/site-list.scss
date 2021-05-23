@@ -106,3 +106,13 @@
 .site-list__item-title--current-item.site-list__item-title--form-space {
   padding-bottom: 4px;
 }
+
+.site-list__item-title--current-item.site-list__item-title--catalog-space {
+  padding-bottom: 6px;
+}
+
+.site-list.page-header__catalog-site-list .site-list__item-title {
+  @media (min-width: $desktop-width) {
+    @include fonts($fontOswaldRegular, 400, normal, 20px, 24px, $black);
+  }
+}

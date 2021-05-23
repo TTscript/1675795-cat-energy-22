@@ -15,7 +15,15 @@
 }
 
 .page-header.page-body__catalog-space {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .page-header.page-body__form-space {
