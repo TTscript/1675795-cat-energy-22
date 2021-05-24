@@ -99,6 +99,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 68px 69px 67px 76px;
+    background-color: $basic-white;
   }
 }
 
@@ -117,7 +118,9 @@
 }
 
 .contacts__catalog-space {
-  margin: 0;
+  @media (max-width: $tablet-max-width) {
+    margin: 0;
+  }
 }
 
 .contacts__map {
