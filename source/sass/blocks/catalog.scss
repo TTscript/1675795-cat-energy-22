@@ -1,7 +1,10 @@
 .catalog__inner {
+  overflow: hidden;
+
   @media (min-width: $tablet-width) {
     padding: 0 30px;
     margin-bottom: 9px;
+    max-width: 875px;
   }
 
   @media (min-width: $desktop-width) {
@@ -108,7 +111,7 @@
   @media (min-width: $tablet-width) {
     text-align: center;
     width: 324px;
-    height: 511px;
+    min-height: 511px;
     background: linear-gradient(to bottom, transparent 16%, $btn-color 16%);
   }
 

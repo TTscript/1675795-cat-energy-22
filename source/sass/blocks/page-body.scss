@@ -38,3 +38,15 @@
     margin-bottom: 75px;
   }
 }
+
+.page-main.page-body__page-main-index {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-main.page-body__page-main-form {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}

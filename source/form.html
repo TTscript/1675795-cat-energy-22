@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"> <!-- 32x32 -->
     <link rel="icon" href="img/icons/32.svg" type="image/svg+xml"> <!-- 32x32 -->
     <link rel="apple-touch-icon" href="/source/img/icons/180.png"> <!-- 180x180 -->
@@ -53,7 +53,7 @@
       </nav>
     </header>
 
-      <main class="page-main">
+      <main class="page-main page-body__page-main-form">
 
         <div class="page-main__wrapper">
           <h1 class="page-main__title">Подбор программы</h1>
@@ -210,35 +210,6 @@
 
       </footer>
 
-    <script>
-      //if-no-js
-      let burgerMenu = document.querySelector('.site-list');
-      burgerMenu.classList.add('site-list__join-js');
-
-        //burger-menu
-      let burgerButton = document.querySelector('.burger-menu');
-      let transition = document.querySelector('.site-list__transition');
-
-      burgerButton.addEventListener('click', function () {
-
-
-        burgerMenu.classList.toggle('site-list__transition');
-
-        let lineOne = document.querySelector('.burger-menu__line--first-translate');
-        lineOne.classList.toggle('burger-menu__line--first');
-
-        let lineTwo = document.querySelector('.burger-menu__line--second-rotate');
-        lineTwo.classList.toggle('burger-menu__line--second');
-
-        let lineThree = document.querySelector('.burger-menu__line--third-rotate');
-        lineThree.classList.toggle('burger-menu__line--third');
-
-        let lineFour = document.querySelector('.burger-menu__line--fourth-translate');
-        lineFour.classList.toggle('burger-menu__line--fourth');
-
-        burgerMenu.classList.toggle('site-list--burger-menu');
-
-      });
-    </script>
+      <script src="js/script.min.js"></script>
   </body>
 </html>
