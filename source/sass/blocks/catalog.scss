@@ -1,6 +1,8 @@
-.catalog__inner {
+.catalog {
   overflow: hidden;
+}
 
+.catalog__inner {
   @media (min-width: $tablet-width) {
     padding: 0 30px;
     margin-bottom: 9px;
