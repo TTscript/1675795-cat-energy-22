@@ -17,7 +17,8 @@
 
   @media (min-width: $desktop-width) {
     background: url("../img/cat-back-desktop.png") no-repeat;
-    min-width: 245px;
+    min-width: 0;
+    width: 260px;
     min-height: 289px;
     padding: 57px 20px 20px 24px;
     margin: 0;

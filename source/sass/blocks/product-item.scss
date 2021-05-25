@@ -7,14 +7,14 @@
   @media (min-width: $tablet-width) {
     min-height: 139px;
     border: 1px solid $scale-color;
-    padding: 26px 35px 1px 38px;
+    padding: 26px 35px 10px 38px;
     border-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     border-left: 0;
     border-right: 0;
-    padding: 5px 0 0 2px;
+    padding: 10px 0 10px 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,6 +90,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 15px;
   }
 
