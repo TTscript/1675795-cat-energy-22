@@ -1,18 +1,26 @@
+.catalog {
+  overflow: hidden;
+}
+
 .catalog__inner {
-  padding: 0 20px;
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+    margin-bottom: 9px;
+    max-width: 875px;
+  }
 
   @media (min-width: $desktop-width) {
     max-width: 1320px;
-    margin: 0 auto;
+    margin: 0 auto 19px auto;
     padding: 0 50px;
   }
 }
 
 .catalog__title {
   @include fonts($fontOswaldRegular, 400, normal, 36px, 36px, $black);
-  text-align: center;
   padding: 0 20px;
   margin: 0 0 40px 0;
+  text-align: left;
 
   @media (min-width: $tablet-width) {
     @include fontSizeColor(60px, 60px, $black);
@@ -24,7 +32,7 @@
   @media (min-width: $desktop-width) {
     max-width: 1320px;
     padding: 0 50px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 84px auto;
   }
 }
 
@@ -46,14 +54,19 @@
 }
 
 .catalog__item {
-  margin: 0 0 19px 0;
-  padding: 0 0 25px 0;
+  margin: 0;
+  padding: 0;
   border-bottom: 1px solid $catalog-line;
 
+  @media (max-width: $mobile-only) {
+    min-height: 209px;
+  }
+
   @media (min-width: $tablet-width) {
+    min-height: 324px;
     padding: 0;
     border: 0;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -63,6 +76,18 @@
 
   &:first-of-type {
     border-top: 1px solid $catalog-line;
+
+    .catalog__item-inner {
+      margin-bottom: 20px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 30px;
+      }
+
+      .text-block {
+        padding-top: 14px;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       border: 0;
@@ -74,14 +99,22 @@
   }
 }
 
+.catalog__item-more-products {
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 83px;
+  }
+}
+
 .catalog__wrapper {
-  text-align: center;
+  padding: 0 20px 10px 20px;
 
   @media (min-width: $tablet-width) {
     text-align: center;
     width: 324px;
-    height: 511px;
-    background: linear-gradient(to bottom, transparent 15%, $btn-color 15%);
+    min-height: 511px;
+    background: linear-gradient(to bottom, transparent 16%, $btn-color 16%);
   }
 
   @media (min-width: $desktop-width) {
@@ -89,33 +122,93 @@
   }
 }
 
+.catalog__wrapper-big-image .text-block {
+  padding-top: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  .text-block__title {
+    padding: 0 0 0 3px;
+  }
+}
+
 .catalog__wrapper--inner-intend {
   @media (min-width: $tablet-width) {
-    padding-top: 30px;
+    padding-top: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
   }
 }
 
 .catalog__item-inner {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin: 0 0 20px 0;
-  padding: 19px 0 0 45px;
+  margin: 0 0 13px 0;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
+    margin-bottom: 29px;
+  }
+}
+
+.catalog__item-inner--big-pic {
+  margin-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 29px;
   }
 }
 
 .catalog__item-img {
-  margin: 0 15px 0 0;
-  padding: 0;
+  margin: 0 24px 0 0;
+  padding: 48px 0 0 34px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 30px 0;
+    margin: 0 0 15px 0;
     padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.catalog__first-img {
+  padding-top: 32px;
+  padding-left: 31px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-bottom: 11px;
+  }
+}
+
+.catalog__first-img .catalog__small-picture {
+  min-width: 79px;
+  min-height: 88px;
+}
+
+.catalog__big-img {
+  margin: 0 22px 0 0;
+  padding: 33px 0 0 28px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0 0 30px 0;
+    padding-top: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 5px;
+    margin-bottom: 42px;
   }
 }
 
@@ -134,15 +227,34 @@
 }
 
 .catalog__small-picture {
+  min-width: 75px;
+  min-height: 76px;
+
   @media (min-width: $tablet-width) {
     width: 163px;
-    height: 174px;
+    height: 203px;
+    padding-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 167px;
+    height: 204px;
+    padding-top: 31px;
+    padding-left: 4px;
   }
 }
 
 .catalog__big-picture {
+  min-width: 84px;
+  min-height: 84px;
+
   @media (min-width: $tablet-width) {
-    width: 168px;
-    height: 200px;
+    width: 171px;
+    height: 201px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 173px;
+    height: 189px;
   }
 }

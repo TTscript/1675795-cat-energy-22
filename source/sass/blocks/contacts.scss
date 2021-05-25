@@ -72,7 +72,7 @@
   line-height: 20px;
   width: 50%;
   margin: 0;
-  padding: 00;
+  padding: 0;
 
 
   @media (min-width: $tablet-width) {
@@ -99,6 +99,17 @@
 
   @media (min-width: $desktop-width) {
     padding: 68px 69px 67px 76px;
+    background-color: $basic-white;
+  }
+}
+
+.page-footer__contacts--gray-color {
+  background-color: $btn-color;
+}
+
+.contacts__catalog-space {
+  @media (max-width: $tablet-max-width) {
+    margin: 0;
   }
 }
 
