@@ -103,18 +103,8 @@
   }
 }
 
-.contacts__catalog-color {
+.page-footer__contacts--gray-color {
   background-color: $btn-color;
-  padding: 28px 20px;
-
-  @media (min-width: $tablet-width) {
-    padding: 67px 70px 58px 70px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 69px 70px 58px 77px;
-    background-color: $basic-white;
-  }
 }
 
 .contacts__catalog-space {
