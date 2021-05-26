@@ -148,20 +148,24 @@
   &:focus {
     & + .owner-contacts__entry-box-img--mail {
       stroke: $basic-green;
+      fill: $basic-green;
     }
 
     & + .owner-contacts__entry-box-img--phone {
       fill: $basic-green;
+      stroke: $basic-green;
     }
   }
 
   &:required:invalid {
     & + .owner-contacts__entry-box-img--mail {
       stroke: $entry-box-error;
+      fill: $entry-box-error;
     }
 
     & + .owner-contacts__entry-box-img--phone {
       fill: $entry-box-error;
+      stroke: $entry-box-error;
     }
   }
 }

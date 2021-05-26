@@ -20,6 +20,7 @@
   display: block;
   color: $radio-button-color;
   cursor: pointer;
+  user-select: none;
   margin-bottom: 9px;
 
   @media (min-width: $tablet-width) {
@@ -57,6 +58,10 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  &:focus + .radio-box__label {
+    outline: 2px solid $black;
+  }
 
   &:hover + .radio-box__label::before {
     content: "";
