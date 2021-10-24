@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32x32 -->
+    <link rel="icon" href="img/icons/32.svg" type="image/svg+xml"> <!-- 32x32 -->
+    <link rel="apple-touch-icon" href="/source/img/icons/180.png"> <!-- 180x180 -->
+    <link rel="manifest" href="manifest.webmanifest.json"> <!-- 192x192 --> <!-- 512x512 -->
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font">
+  </head>
+
+  <body class="page-body">
+
+    <header class="page-header page-body__form-space">
+      <nav class="page-header__nav">
+
+        <div class="page-header__wrapper">
+          <a class="page-header__logo" href="index.html">
+            <picture>
+              <source class="page-header__logo-desktop" srcset="img/logo-desktop.svg" media="(min-width: 1320px)">
+              <source class="page-header__logo-tablet" srcset="img/logo-tablet.svg" media="(min-width: 768px)">
+              <img class="page-header__logo-mobile" src="img/logo.svg" width="33" height="38" alt="Логотип cat energy">
+            </picture>
+            <img class="page-header__logo-mobile-text" src="img/logo-2-cat-energy.svg" width="101" height="18" alt="Текст логотипа">
+          </a>
+
+          <div class="burger-menu" tabindex="1">
+            <div class="burger-menu__line burger-menu__line--first-translate"></div>
+            <div class="burger-menu__line burger-menu__line--second-rotate"></div>
+            <div class="burger-menu__line burger-menu__line--third-rotate"></div>
+            <div class="burger-menu__line burger-menu__line--fourth-translate"></div>
+          </div>
+        </div>
+
+          <ul class="site-list page-header__site-list-form-space">
+
+          <li class="site-list__item">
+            <a class="site-list__item-title" href="index.html">главная</a>
+          </li>
+
+          <li class="site-list__item">
+            <a class="site-list__item-title" href="catalog.html">каталог продукции</a>
+          </li>
+
+          <li class="site-list__item">
+            <a class="site-list__item-title site-list__item-title--current-item site-list__item-title--form-space" href="form.html">подбор программы</a>
+          </li>
+
+          </ul>
+
+      </nav>
+    </header>
+
+      <main class="page-main page-body__page-main-form">
+
+        <div class="page-main__wrapper">
+          <h1 class="page-main__title">Подбор программы</h1>
+          <form class="shape" action="https://echo.htmlacademy.ru/" method="GET">
+
+            <p class="shape__programm-text">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+
+            <div class="shape__inner">
+
+              <fieldset class="shape__item questionnaire">
+
+                <p class="questionnaire__item">
+                  <label class="page-main__logic-connection questionnaire__logic-connection" for="name">ИМЯ:*</label>
+                  <input class="questionnaire__entry-box entry-box entry-box" type="text" name="name" id="name" value="барсик" required>
+                </p>
+                <p class="questionnaire__item">
+                  <label class="page-main__logic-connection questionnaire__logic-connection" for="weight">Вес (кг):*</label>
+                  <input class="questionnaire__entry-box entry-box" type="text" name="weight" id="weight" value="7" required>
+                </p>
+                <p class="questionnaire__item">
+                  <label class="page-main__logic-connection questionnaire__logic-connection" for="age">Возраст (лет):</label>
+                  <input class="questionnaire__entry-box entry-box" type="text" name="age" id="age" value="7">
+                </p>
+              </fieldset>
+
+              <fieldset class="radio-box-field">
+                <div class="radio-box-field__inner">
+                  <p class="radio-box">
+                    <input class="radio-box__input" type="radio" name="radio" id="lose-weight" value="lose-weight" checked>
+                    <label class="radio-box__label page-main__logic-connection" for="lose-weight">похудение</label>
+                  </p>
+                  <p class="radio-box">
+                    <input class="radio-box__input" type="radio" name="radio" id="gain-weight" value="gain-weight">
+                    <label class="radio-box__label page-main__logic-connection" for="gain-weight">Набор массы</label>
+                  </p>
+                  <p class="radio-box">
+                    <input class="radio-box__input" type="radio" name="radio" id="advice" value="advice">
+                    <label class="radio-box__label page-main__logic-connection" for="advice">Не знаю (Нужен ваш совет)</label>
+                  </p>
+                </div>
+
+              </fieldset>
+
+            </div>
+
+            <fieldset class="shape__item owner-contacts">
+
+              <legend class="owner-contacts__title">Контактные данные <br class="owner-contacts__break"> (владельца кота)</legend>
+
+              <div class="owner-contacts__inner">
+                <div class="owner-contacts__item">
+                  <label class="page-main__logic-connection" for="email">E-mail:*</label>
+                  <div class="owner-contacts__item-wrapper">
+                      <input class="owner-contacts__entry-box entry-box entry-box--email-img" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
+                      <svg class="owner-contacts__entry-box-img owner-contacts__entry-box-img--mail" width="20" height="15">
+                        <use href="img/sprite.svg#icon-email"></use>
+                      </svg>
+                  </div>
+                </div>
+
+                <div class="owner-contacts__item">
+                  <div class="owner-contacts__item-wrapper">
+                    <label class="page-main__logic-connection" for="phone">Телефон:*</label>
+                    <input class="owner-contacts__entry-box entry-box entry-box--phone-img" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
+                      <svg class="owner-contacts__entry-box-img owner-contacts__entry-box-img--phone" width="20" height="21">
+                        <use href="img/sprite.svg#icon-phone"></use>
+                      </svg>
+                  </div>
+                </div>
+
+              </div>
+            </fieldset>
+
+            <fieldset class="shape__item comment">
+              <legend class="comment__title">Комментарий</legend>
+              <label class="visually-hidden" for="textarea">Поле для комментария</label>
+              <textarea class="comment__field" cols="40" rows="8" id="textarea" placeholder="Расскажите обо всех повАдках кота"></textarea>
+            </fieldset>
+
+            <fieldset class="shape__item addition">
+              <legend class="addition__title">Дополнительно</legend>
+              <div class="addition__inner">
+                <p class="addition__item check-box">
+                  <input class="addition__check-box check-box__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <label class="addition__label check-box__label" for="sweetener">сахарозаменитель</label>
+                </p>
+                <p class="addition__item check-box">
+                  <input class="addition__check-box check-box__input" type="checkbox" name="drinking-water" id="drinking-water">
+                  <label class="addition__label check-box__label" for="drinking-water">питьевая вода</label>
+                </p>
+                <p class="addition__item check-box">
+                  <input class="addition__check-box check-box__input" type="checkbox" name="milk" id="milk">
+                  <label class="addition__label check-box__label" for="milk">молоко</label>
+                </p>
+                <p class="addition__item check-box">
+                  <input class="addition__check-box check-box__input" type="checkbox" name="vitamins" id="vitamins">
+                  <label  class="addition__label check-box__label" for="vitamins">витамины</label>
+                </p>
+              </div>
+            </fieldset>
+
+            <div class="shape__button-wrapper">
+              <button class="button button--space" type="submit" name="send-form">отправить заявку</button>
+              <p class="shape__required-text">* — Обязательные поля</p>
+            </div>
+
+          </form>
+
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <div class="contacts page-footer__contacts">
+          <div class="contacts__center-wrapper">
+            <div class="contacts__wrapper">
+              <p class="contacts__invite">приглашаем <br> к сотрудничеству дилеров!
+              <p class="contacts__address">
+                ул. Большая  <br> Конюшенная, д. 19/8 <br> <span class="contacts__adress-index-space"> Санкт-Петербург </span>
+              </p>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <iframe class="contacts__map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002983!2d30.32085871593242!3d59.93871916905438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1617970093934!5m2!1sru!2skz"
+            width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="page-footer__inner">
+          <div class="footer-logo">
+            <a class="footer-logo__img logo logo--hover-active" href="#">
+              <img src="img/logo-2-cat-energy.svg" width="128" height="24" alt="Логотип-текст">
+            </a>
+          </div>
+          <div class="social-border-wrapper">
+            <ul class="social-list">
+              <li><a class="social-list__social-item social-list__social-item--vkontakte social-list__social-item--hover-active" href="https://vk.com/" aria-label="Вконтакте"></a></li>
+              <li><a class="social-list__social-item social-list__social-item--instagram social-list__social-item--hover-active" href="https://www.instagram.com/?hl=ru" aria-label="Инстаграм"></a></li>
+              <li><a class="social-list__social-item social-list__social-item--facebook social-list__social-item--hover-active" href="https://www.facebook.com/" aria-label="Фейсбук"></a></li>
+            </ul>
+          </div>
+          <p class="academy-logo">
+            <a class="academy-logo__link" href="https://htmlacademy.ru/intensive/adaptive"> HTML Academy
+              <svg class="academy-logo__img" width="27" height="34"  fill="#666" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02L13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0zm11.6
+                25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26zm0-11.57L22
+                15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8
+                13.58l11.63-6.96 11.8 6.83zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24z"/>
+              </svg>
+            </a>
+          </p>
+        </div>
+
+      </footer>
+
+      <script src="js/script.min.js"></script>
+  </body>
+</html>
